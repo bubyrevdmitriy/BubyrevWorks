@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "CreateStudent";
+}
+
+<script>
+    function myfun() {
+
+        var a = document.getElementById("nameInput").value;
+        var b = document.getElementById("dataInput").value;
+        if ('' == a || '' == b)
+        {  }  
+        else { alert("Студент "+a+" успешно добавлен!");}
+    }
+</script>
+
+
+<h2>Добавить нового студента</h2>
+
+<form method="post" action="">
+    <table class="table">
+        <tr>
+            <td><p>Введите имя студента </p></td>
+            <td><input type="text" id="nameInput" name="Name" required="required" /></td>
+        </tr>
+        <tr>
+            <td><p>Введите оценку за курс С#</p></td>
+            <td><input type="number" name="CourseCSResult" min="1" max="5" /></td>
+        </tr>
+
+        <tr>
+            <td><p>Введите оценку за курс Java</p></td>
+            <td><input type="number" name="CourseJavsResult" min="1" max="5" /></td>
+        </tr>
+
+        <tr>
+            <td><p>Введите оценку за курс С++</p></td>
+            <td><input type="number" name="CourseCPPResult" min="1" max="5" /></td>
+        </tr>
+
+        <tr>
+            <td><p>Введите оценку за курс Python</p></td>
+            <td><input type="number" name="CoursePythonResult" min="1" max="5" /></td>
+        </tr>
+
+        <tr>
+            <td><p>Введите дату начала обучения</p></td>
+            <td><input type="date"  id="dataInput" name="StudentStartDate" min="2000-01-01" max="2030-12-31" required="required"><td>
+        </tr>
+
+
+
+        <tr>
+            <td><input type="submit" value="Отправить" min="1" max="5" onclick="myfun()"/> </td>
+            <td></td>
+        </tr>
+    </table>
+</form>

@@ -1,0 +1,10 @@
+C:\Users\bubyr\source\repos\DataBindingSimple\DataBindingSimple\bin\Debug\DataBindingSimple.exe.config
+C:\Users\bubyr\source\repos\DataBindingSimple\DataBindingSimple\bin\Debug\DataBindingSimple.exe
+C:\Users\bubyr\source\repos\DataBindingSimple\DataBindingSimple\bin\Debug\DataBindingSimple.pdb
+C:\Users\bubyr\source\repos\DataBindingSimple\DataBindingSimple\obj\Debug\DataBindingSimple.csprojAssemblyReference.cache
+C:\Users\bubyr\source\repos\DataBindingSimple\DataBindingSimple\obj\Debug\DataBindingSimple.Properties.Resources.resources
+C:\Users\bubyr\source\repos\DataBindingSimple\DataBindingSimple\obj\Debug\DataBindingSimple.csproj.GenerateResource.cache
+C:\Users\bubyr\source\repos\DataBindingSimple\DataBindingSimple\obj\Debug\DataBindingSimple.csproj.CoreCompileInputs.cache
+C:\Users\bubyr\source\repos\DataBindingSimple\DataBindingSimple\obj\Debug\DataBindingSimple.exe
+C:\Users\bubyr\source\repos\DataBindingSimple\DataBindingSimple\obj\Debug\DataBindingSimple.pdb
+C:\Users\bubyr\source\repos\DataBindingSimple\DataBindingSimple\obj\Debug\DataBindingSimple.Form1.resources

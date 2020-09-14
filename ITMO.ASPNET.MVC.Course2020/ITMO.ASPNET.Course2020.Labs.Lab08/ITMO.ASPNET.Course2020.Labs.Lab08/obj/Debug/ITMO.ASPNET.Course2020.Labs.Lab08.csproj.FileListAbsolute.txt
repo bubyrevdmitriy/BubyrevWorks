@@ -1,0 +1,12 @@
+C:\Users\bubyr\source\repos\ITMO.ASPNET.Course2020.Labs.Lab08\ITMO.ASPNET.Course2020.Labs.Lab08\bin\ITMO.ASPNET.Course2020.Labs.Lab08.dll.config
+C:\Users\bubyr\source\repos\ITMO.ASPNET.Course2020.Labs.Lab08\ITMO.ASPNET.Course2020.Labs.Lab08\bin\ITMO.ASPNET.Course2020.Labs.Lab08.dll
+C:\Users\bubyr\source\repos\ITMO.ASPNET.Course2020.Labs.Lab08\ITMO.ASPNET.Course2020.Labs.Lab08\bin\ITMO.ASPNET.Course2020.Labs.Lab08.pdb
+C:\Users\bubyr\source\repos\ITMO.ASPNET.Course2020.Labs.Lab08\ITMO.ASPNET.Course2020.Labs.Lab08\obj\Debug\ITMO.ASPNET.Course2020.Labs.Lab08.csprojAssemblyReference.cache
+C:\Users\bubyr\source\repos\ITMO.ASPNET.Course2020.Labs.Lab08\ITMO.ASPNET.Course2020.Labs.Lab08\obj\Debug\ITMO.ASPNET.Course2020.Labs.Lab08.csproj.CoreCompileInputs.cache
+C:\Users\bubyr\source\repos\ITMO.ASPNET.Course2020.Labs.Lab08\ITMO.ASPNET.Course2020.Labs.Lab08\obj\Debug\ITMO.ASPNET.Course2020.Labs.Lab08.csproj.CopyComplete
+C:\Users\bubyr\source\repos\ITMO.ASPNET.Course2020.Labs.Lab08\ITMO.ASPNET.Course2020.Labs.Lab08\obj\Debug\ITMO.ASPNET.Course2020.Labs.Lab08.dll
+C:\Users\bubyr\source\repos\ITMO.ASPNET.Course2020.Labs.Lab08\ITMO.ASPNET.Course2020.Labs.Lab08\obj\Debug\ITMO.ASPNET.Course2020.Labs.Lab08.pdb
+C:\Users\bubyr\source\repos\ITMO.ASPNET.Course2020.Labs.Lab08\ITMO.ASPNET.Course2020.Labs.Lab08\bin\EntityFramework.dll
+C:\Users\bubyr\source\repos\ITMO.ASPNET.Course2020.Labs.Lab08\ITMO.ASPNET.Course2020.Labs.Lab08\bin\EntityFramework.SqlServer.dll
+C:\Users\bubyr\source\repos\ITMO.ASPNET.Course2020.Labs.Lab08\ITMO.ASPNET.Course2020.Labs.Lab08\bin\EntityFramework.xml
+C:\Users\bubyr\source\repos\ITMO.ASPNET.Course2020.Labs.Lab08\ITMO.ASPNET.Course2020.Labs.Lab08\bin\EntityFramework.SqlServer.xml

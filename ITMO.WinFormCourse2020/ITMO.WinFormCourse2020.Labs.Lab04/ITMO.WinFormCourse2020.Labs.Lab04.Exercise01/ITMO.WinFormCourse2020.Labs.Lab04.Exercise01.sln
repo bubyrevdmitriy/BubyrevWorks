@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.WinFormCourse2020.Labs.Lab04.Exercise01", "ITMO.WinFormCourse2020.Labs.Lab04.Exercise01\ITMO.WinFormCourse2020.Labs.Lab04.Exercise01.csproj", "{74FD9F97-A84E-4977-969D-E78B6AAB0461}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74FD9F97-A84E-4977-969D-E78B6AAB0461}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74FD9F97-A84E-4977-969D-E78B6AAB0461}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74FD9F97-A84E-4977-969D-E78B6AAB0461}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74FD9F97-A84E-4977-969D-E78B6AAB0461}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {965BA41F-2D41-48CC-AA78-106902A0D7D6}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQsqlSproc", "LINQsqlSproc\LINQsqlSproc.csproj", "{AC8C59F6-CF3D-4ECB-8D30-A3BA03865B46}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{11FB34D9-50EC-40D5-8192-698EA413D23A}"
+	ProjectSection(SolutionItems) = preProject
+		F:\КнигиПрограмирование\ADO.NET\2\DataBase\northwind.cs = F:\КнигиПрограмирование\ADO.NET\2\DataBase\northwind.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC8C59F6-CF3D-4ECB-8D30-A3BA03865B46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC8C59F6-CF3D-4ECB-8D30-A3BA03865B46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC8C59F6-CF3D-4ECB-8D30-A3BA03865B46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC8C59F6-CF3D-4ECB-8D30-A3BA03865B46}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ACB29296-F30F-43CB-BB3D-D997FE697E34}
+	EndGlobalSection
+EndGlobal

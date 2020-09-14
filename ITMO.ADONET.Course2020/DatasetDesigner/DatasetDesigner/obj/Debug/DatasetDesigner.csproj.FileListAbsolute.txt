@@ -1,0 +1,10 @@
+C:\Users\bubyr\source\repos\DatasetDesigner\DatasetDesigner\bin\Debug\DatasetDesigner.exe.config
+C:\Users\bubyr\source\repos\DatasetDesigner\DatasetDesigner\bin\Debug\DatasetDesigner.exe
+C:\Users\bubyr\source\repos\DatasetDesigner\DatasetDesigner\bin\Debug\DatasetDesigner.pdb
+C:\Users\bubyr\source\repos\DatasetDesigner\DatasetDesigner\obj\Debug\DatasetDesigner.csprojAssemblyReference.cache
+C:\Users\bubyr\source\repos\DatasetDesigner\DatasetDesigner\obj\Debug\DatasetDesigner.Properties.Resources.resources
+C:\Users\bubyr\source\repos\DatasetDesigner\DatasetDesigner\obj\Debug\DatasetDesigner.csproj.GenerateResource.cache
+C:\Users\bubyr\source\repos\DatasetDesigner\DatasetDesigner\obj\Debug\DatasetDesigner.csproj.CoreCompileInputs.cache
+C:\Users\bubyr\source\repos\DatasetDesigner\DatasetDesigner\obj\Debug\DatasetDesigner.exe
+C:\Users\bubyr\source\repos\DatasetDesigner\DatasetDesigner\obj\Debug\DatasetDesigner.pdb
+C:\Users\bubyr\source\repos\DatasetDesigner\DatasetDesigner\obj\Debug\DatasetDesigner.Form1.resources

@@ -1,0 +1,18 @@
+﻿
+@{
+    //Layout = "~/Views/_BasicLayout.cshtml"; 
+    ViewBag.Title = "Главная";
+}
+
+   
+    <div>
+        @ViewBag.Greeting, спасибо, что зашли и @ViewData["Mes"]
+        <p>
+            @Html.ActionLink("Введите свои данные", "InputData")
+        <p>
+            @Html.ActionLink("Посмотрите, кто уже здесь", "OutputData")
+        </p>
+    </div>
+
+
+

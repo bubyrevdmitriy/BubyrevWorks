@@ -1,0 +1,10 @@
+C:\Users\bubyr\source\repos\DataSourcesWizard\DataSourcesWizard\bin\Debug\DataSourcesWizard.exe.config
+C:\Users\bubyr\source\repos\DataSourcesWizard\DataSourcesWizard\bin\Debug\DataSourcesWizard.exe
+C:\Users\bubyr\source\repos\DataSourcesWizard\DataSourcesWizard\bin\Debug\DataSourcesWizard.pdb
+C:\Users\bubyr\source\repos\DataSourcesWizard\DataSourcesWizard\obj\Debug\DataSourcesWizard.csprojAssemblyReference.cache
+C:\Users\bubyr\source\repos\DataSourcesWizard\DataSourcesWizard\obj\Debug\DataSourcesWizard.Properties.Resources.resources
+C:\Users\bubyr\source\repos\DataSourcesWizard\DataSourcesWizard\obj\Debug\DataSourcesWizard.csproj.GenerateResource.cache
+C:\Users\bubyr\source\repos\DataSourcesWizard\DataSourcesWizard\obj\Debug\DataSourcesWizard.csproj.CoreCompileInputs.cache
+C:\Users\bubyr\source\repos\DataSourcesWizard\DataSourcesWizard\obj\Debug\DataSourcesWizard.exe
+C:\Users\bubyr\source\repos\DataSourcesWizard\DataSourcesWizard\obj\Debug\DataSourcesWizard.pdb
+C:\Users\bubyr\source\repos\DataSourcesWizard\DataSourcesWizard\obj\Debug\DataSourcesWizard.Form1.resources

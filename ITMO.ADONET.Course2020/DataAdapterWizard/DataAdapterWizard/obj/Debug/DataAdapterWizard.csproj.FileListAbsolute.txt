@@ -1,0 +1,10 @@
+C:\Users\bubyr\source\repos\DataAdapterWizard\DataAdapterWizard\bin\Debug\DataAdapterWizard.exe.config
+C:\Users\bubyr\source\repos\DataAdapterWizard\DataAdapterWizard\bin\Debug\DataAdapterWizard.exe
+C:\Users\bubyr\source\repos\DataAdapterWizard\DataAdapterWizard\bin\Debug\DataAdapterWizard.pdb
+C:\Users\bubyr\source\repos\DataAdapterWizard\DataAdapterWizard\obj\Debug\DataAdapterWizard.csprojAssemblyReference.cache
+C:\Users\bubyr\source\repos\DataAdapterWizard\DataAdapterWizard\obj\Debug\DataAdapterWizard.Form1.resources
+C:\Users\bubyr\source\repos\DataAdapterWizard\DataAdapterWizard\obj\Debug\DataAdapterWizard.Properties.Resources.resources
+C:\Users\bubyr\source\repos\DataAdapterWizard\DataAdapterWizard\obj\Debug\DataAdapterWizard.csproj.GenerateResource.cache
+C:\Users\bubyr\source\repos\DataAdapterWizard\DataAdapterWizard\obj\Debug\DataAdapterWizard.csproj.CoreCompileInputs.cache
+C:\Users\bubyr\source\repos\DataAdapterWizard\DataAdapterWizard\obj\Debug\DataAdapterWizard.exe
+C:\Users\bubyr\source\repos\DataAdapterWizard\DataAdapterWizard\obj\Debug\DataAdapterWizard.pdb

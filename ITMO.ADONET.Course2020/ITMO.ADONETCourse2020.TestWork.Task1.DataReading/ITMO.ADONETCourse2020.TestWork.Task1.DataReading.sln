@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ADONETCourse2020.TestWork.Task1.DataReading", "ITMO.ADONETCourse2020.TestWork.Task1.DataReading\ITMO.ADONETCourse2020.TestWork.Task1.DataReading.csproj", "{B4496A93-A035-4A27-96C3-BE0B39D8A025}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4496A93-A035-4A27-96C3-BE0B39D8A025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4496A93-A035-4A27-96C3-BE0B39D8A025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4496A93-A035-4A27-96C3-BE0B39D8A025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4496A93-A035-4A27-96C3-BE0B39D8A025}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF672906-028B-4933-8210-9561440A7B8F}
+	EndGlobalSection
+EndGlobal

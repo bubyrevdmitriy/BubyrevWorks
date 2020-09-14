@@ -1,0 +1,10 @@
+C:\Users\bubyr\source\repos\SavingDataSetXml\SavingDataSetXml\bin\Debug\SavingDataSetXml.exe.config
+C:\Users\bubyr\source\repos\SavingDataSetXml\SavingDataSetXml\bin\Debug\SavingDataSetXml.exe
+C:\Users\bubyr\source\repos\SavingDataSetXml\SavingDataSetXml\bin\Debug\SavingDataSetXml.pdb
+C:\Users\bubyr\source\repos\SavingDataSetXml\SavingDataSetXml\obj\Debug\SavingDataSetXml.csprojAssemblyReference.cache
+C:\Users\bubyr\source\repos\SavingDataSetXml\SavingDataSetXml\obj\Debug\SavingDataSetXml.Form1.resources
+C:\Users\bubyr\source\repos\SavingDataSetXml\SavingDataSetXml\obj\Debug\SavingDataSetXml.Properties.Resources.resources
+C:\Users\bubyr\source\repos\SavingDataSetXml\SavingDataSetXml\obj\Debug\SavingDataSetXml.csproj.GenerateResource.cache
+C:\Users\bubyr\source\repos\SavingDataSetXml\SavingDataSetXml\obj\Debug\SavingDataSetXml.csproj.CoreCompileInputs.cache
+C:\Users\bubyr\source\repos\SavingDataSetXml\SavingDataSetXml\obj\Debug\SavingDataSetXml.exe
+C:\Users\bubyr\source\repos\SavingDataSetXml\SavingDataSetXml\obj\Debug\SavingDataSetXml.pdb

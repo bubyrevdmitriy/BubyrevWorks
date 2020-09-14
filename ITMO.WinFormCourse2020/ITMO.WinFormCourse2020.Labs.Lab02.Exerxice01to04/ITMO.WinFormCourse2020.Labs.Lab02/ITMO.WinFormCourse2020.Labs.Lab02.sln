@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.WinFormCourse2020.Labs.Lab02.Exercise01", "..\ITMO.WinFormCourse2020.Labs.Lab02.Exercise01\ITMO.WinFormCourse2020.Labs.Lab02.Exercise01\ITMO.WinFormCourse2020.Labs.Lab02.Exercise01.csproj", "{B712D939-6C03-4926-94A2-55076C34996A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.WinFormCourse2020.Labs.Lab02.Exercise02", "..\ITMO.WinFormCourse2020.Labs.Lab02.Exercise02\ITMO.WinFormCourse2020.Labs.Lab02.Exercise02\ITMO.WinFormCourse2020.Labs.Lab02.Exercise02.csproj", "{E0FD798B-A1B4-4451-A0CC-390EEF77BA7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.WinFormCourse2020.Labs.Lab02.Exercise03", "..\ITMO.WinFormCourse2020.Labs.Lab02.Exercise03\ITMO.WinFormCourse2020.Labs.Lab02.Exercise03\ITMO.WinFormCourse2020.Labs.Lab02.Exercise03.csproj", "{26C6141C-AEE4-48EA-92A5-86496F21F973}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.WinFormCourse2020.Labs.Lab02.Exercise04", "..\ITMO.WinFormCourse2020.Labs.Lab02.Exercise04\ITMO.WinFormCourse2020.Labs.Lab02.Exercise04\ITMO.WinFormCourse2020.Labs.Lab02.Exercise04.csproj", "{E0110447-3F76-4DCE-81B8-EFB21FE0BA25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.WinFormCourse2020.Labs.Lab02.Exercise05", "..\ITMO.WinFormCourse2020.Labs.Lab02.Exercise05\ITMO.WinFormCourse2020.Labs.Lab02.Exercise05\ITMO.WinFormCourse2020.Labs.Lab02.Exercise05.csproj", "{42F69F73-F258-45BC-A21A-E3C97A727D5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.WinFormCourse2020.Labs.Lab02.Exercise07", "..\ITMO.WinFormCourse2020.Labs.Lab02.Exercise07\ITMO.WinFormCourse2020.Labs.Lab02.Exercise07\ITMO.WinFormCourse2020.Labs.Lab02.Exercise07.csproj", "{30B1620A-1398-40C9-B19F-30383D4F05DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.WinFormCourse2020.Labs.Lab02.Exercise08", "..\ITMO.WinFormCourse2020.Labs.Lab02.Exercise08\ITMO.WinFormCourse2020.Labs.Lab02.Exercise08\ITMO.WinFormCourse2020.Labs.Lab02.Exercise08.csproj", "{6E3DDFCD-54C5-4112-8944-18266B90D467}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.WinFormCourse2020.Labs.Lab02.Exercise06", "..\ITMO.WinFormCourse2020.Labs.Lab02.Exercise06\ITMO.WinFormCourse2020.Labs.Lab02.Exercise06\ITMO.WinFormCourse2020.Labs.Lab02.Exercise06.csproj", "{57529854-526B-447E-A21C-8C2A558F2E1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B712D939-6C03-4926-94A2-55076C34996A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B712D939-6C03-4926-94A2-55076C34996A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B712D939-6C03-4926-94A2-55076C34996A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B712D939-6C03-4926-94A2-55076C34996A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0FD798B-A1B4-4451-A0CC-390EEF77BA7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0FD798B-A1B4-4451-A0CC-390EEF77BA7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0FD798B-A1B4-4451-A0CC-390EEF77BA7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0FD798B-A1B4-4451-A0CC-390EEF77BA7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26C6141C-AEE4-48EA-92A5-86496F21F973}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26C6141C-AEE4-48EA-92A5-86496F21F973}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26C6141C-AEE4-48EA-92A5-86496F21F973}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26C6141C-AEE4-48EA-92A5-86496F21F973}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0110447-3F76-4DCE-81B8-EFB21FE0BA25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0110447-3F76-4DCE-81B8-EFB21FE0BA25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0110447-3F76-4DCE-81B8-EFB21FE0BA25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0110447-3F76-4DCE-81B8-EFB21FE0BA25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42F69F73-F258-45BC-A21A-E3C97A727D5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42F69F73-F258-45BC-A21A-E3C97A727D5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42F69F73-F258-45BC-A21A-E3C97A727D5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42F69F73-F258-45BC-A21A-E3C97A727D5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30B1620A-1398-40C9-B19F-30383D4F05DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30B1620A-1398-40C9-B19F-30383D4F05DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30B1620A-1398-40C9-B19F-30383D4F05DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30B1620A-1398-40C9-B19F-30383D4F05DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E3DDFCD-54C5-4112-8944-18266B90D467}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E3DDFCD-54C5-4112-8944-18266B90D467}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E3DDFCD-54C5-4112-8944-18266B90D467}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E3DDFCD-54C5-4112-8944-18266B90D467}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57529854-526B-447E-A21C-8C2A558F2E1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57529854-526B-447E-A21C-8C2A558F2E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57529854-526B-447E-A21C-8C2A558F2E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57529854-526B-447E-A21C-8C2A558F2E1C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32D3B007-ECCB-49B7-A6F9-4F40DFD784C7}
+	EndGlobalSection
+EndGlobal

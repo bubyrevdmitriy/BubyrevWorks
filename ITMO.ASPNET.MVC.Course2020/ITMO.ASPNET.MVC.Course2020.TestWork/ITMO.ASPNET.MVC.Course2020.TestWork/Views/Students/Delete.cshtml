@@ -1,0 +1,73 @@
+﻿@model ITMO.ASPNET.MVC.Course2020.TestWork.Models.Student
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Удалить</h2>
+
+<h3>Вы уверены, что хотите удалить информацию о студенте?</h3>
+<div>
+    <h4>Студент</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseCSResult)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseCSResult)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseJavsResult)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseJavsResult)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseCPPResult)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseCPPResult)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CoursePythonResult)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CoursePythonResult)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentStartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StudentStartDate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Вернуться в список", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,10 @@
+C:\Users\bubyr\source\repos\LINQsqlSproc\LINQsqlSproc\obj\Debug\LINQsqlSproc.csprojAssemblyReference.cache
+C:\Users\bubyr\source\repos\LINQsqlSproc\LINQsqlSproc\obj\Debug\LINQsqlSproc.Form1.resources
+C:\Users\bubyr\source\repos\LINQsqlSproc\LINQsqlSproc\obj\Debug\LINQsqlSproc.Properties.Resources.resources
+C:\Users\bubyr\source\repos\LINQsqlSproc\LINQsqlSproc\obj\Debug\LINQsqlSproc.csproj.GenerateResource.cache
+C:\Users\bubyr\source\repos\LINQsqlSproc\LINQsqlSproc\obj\Debug\LINQsqlSproc.csproj.CoreCompileInputs.cache
+C:\Users\bubyr\source\repos\LINQsqlSproc\LINQsqlSproc\bin\Debug\LINQsqlSproc.exe.config
+C:\Users\bubyr\source\repos\LINQsqlSproc\LINQsqlSproc\bin\Debug\LINQsqlSproc.exe
+C:\Users\bubyr\source\repos\LINQsqlSproc\LINQsqlSproc\bin\Debug\LINQsqlSproc.pdb
+C:\Users\bubyr\source\repos\LINQsqlSproc\LINQsqlSproc\obj\Debug\LINQsqlSproc.exe
+C:\Users\bubyr\source\repos\LINQsqlSproc\LINQsqlSproc\obj\Debug\LINQsqlSproc.pdb

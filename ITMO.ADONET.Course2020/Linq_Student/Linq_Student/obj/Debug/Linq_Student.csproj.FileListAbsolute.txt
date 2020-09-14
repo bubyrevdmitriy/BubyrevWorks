@@ -1,0 +1,7 @@
+C:\Users\bubyr\source\repos\Linq_Student\Linq_Student\bin\Debug\Linq_Student.exe.config
+C:\Users\bubyr\source\repos\Linq_Student\Linq_Student\bin\Debug\Linq_Student.exe
+C:\Users\bubyr\source\repos\Linq_Student\Linq_Student\bin\Debug\Linq_Student.pdb
+C:\Users\bubyr\source\repos\Linq_Student\Linq_Student\obj\Debug\Linq_Student.csprojAssemblyReference.cache
+C:\Users\bubyr\source\repos\Linq_Student\Linq_Student\obj\Debug\Linq_Student.csproj.CoreCompileInputs.cache
+C:\Users\bubyr\source\repos\Linq_Student\Linq_Student\obj\Debug\Linq_Student.exe
+C:\Users\bubyr\source\repos\Linq_Student\Linq_Student\obj\Debug\Linq_Student.pdb

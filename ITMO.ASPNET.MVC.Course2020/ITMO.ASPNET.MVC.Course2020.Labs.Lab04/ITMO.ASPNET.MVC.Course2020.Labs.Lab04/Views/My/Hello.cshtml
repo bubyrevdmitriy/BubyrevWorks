@@ -1,0 +1,16 @@
+﻿@model ITMO.ASPNET.MVC.Course2020.Labs.Lab03.Models.Person
+
+@{
+    //Layout = "~/Views/_BasicLayout.cshtml";
+    ViewBag.Title = "Приветствие";
+}
+
+<div>
+
+    <h1>Здравствуйте, @Model.ToString()!</h1>
+    <p>
+        @Html.ActionLink("На главную", "Index")
+    </p>
+
+</div>
+

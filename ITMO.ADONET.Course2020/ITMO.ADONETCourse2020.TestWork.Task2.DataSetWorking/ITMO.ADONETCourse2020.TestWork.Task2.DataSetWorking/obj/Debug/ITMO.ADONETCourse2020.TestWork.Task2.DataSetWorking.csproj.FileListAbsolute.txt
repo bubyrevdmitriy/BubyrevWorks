@@ -1,0 +1,10 @@
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking\bin\Debug\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking.exe.config
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking\bin\Debug\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking.exe
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking\bin\Debug\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking.pdb
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking\obj\Debug\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking.csprojAssemblyReference.cache
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking\obj\Debug\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking.Form1.resources
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking\obj\Debug\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking.Properties.Resources.resources
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking\obj\Debug\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking.csproj.GenerateResource.cache
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking\obj\Debug\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking.csproj.CoreCompileInputs.cache
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking\obj\Debug\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking.exe
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking\obj\Debug\ITMO.ADONETCourse2020.TestWork.Task2.DataSetWorking.pdb

@@ -1,0 +1,43 @@
+﻿@model ITMO.ASPNET.MVC.Course2020.Labs.Lab05.Models.Bid
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Bid</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditHead)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreditHead)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bidDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bidDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BidId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

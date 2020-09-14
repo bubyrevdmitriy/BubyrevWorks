@@ -1,0 +1,10 @@
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task1.DataReading\ITMO.ADONETCourse2020.TestWork.Task1.DataReading\bin\Debug\ITMO.ADONETCourse2020.TestWork.Task1.DataReading.exe.config
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task1.DataReading\ITMO.ADONETCourse2020.TestWork.Task1.DataReading\bin\Debug\ITMO.ADONETCourse2020.TestWork.Task1.DataReading.exe
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task1.DataReading\ITMO.ADONETCourse2020.TestWork.Task1.DataReading\bin\Debug\ITMO.ADONETCourse2020.TestWork.Task1.DataReading.pdb
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task1.DataReading\ITMO.ADONETCourse2020.TestWork.Task1.DataReading\obj\Debug\ITMO.ADONETCourse2020.TestWork.Task1.DataReading.csprojAssemblyReference.cache
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task1.DataReading\ITMO.ADONETCourse2020.TestWork.Task1.DataReading\obj\Debug\ITMO.ADONETCourse2020.TestWork.Task1.DataReading.Form1.resources
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task1.DataReading\ITMO.ADONETCourse2020.TestWork.Task1.DataReading\obj\Debug\ITMO.ADONETCourse2020.TestWork.Task1.DataReading.Properties.Resources.resources
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task1.DataReading\ITMO.ADONETCourse2020.TestWork.Task1.DataReading\obj\Debug\ITMO.ADONETCourse2020.TestWork.Task1.DataReading.csproj.GenerateResource.cache
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task1.DataReading\ITMO.ADONETCourse2020.TestWork.Task1.DataReading\obj\Debug\ITMO.ADONETCourse2020.TestWork.Task1.DataReading.csproj.CoreCompileInputs.cache
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task1.DataReading\ITMO.ADONETCourse2020.TestWork.Task1.DataReading\obj\Debug\ITMO.ADONETCourse2020.TestWork.Task1.DataReading.exe
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task1.DataReading\ITMO.ADONETCourse2020.TestWork.Task1.DataReading\obj\Debug\ITMO.ADONETCourse2020.TestWork.Task1.DataReading.pdb

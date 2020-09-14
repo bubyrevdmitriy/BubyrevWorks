@@ -1,0 +1,33 @@
+﻿@model ITMO.ASPNET.MVC.Course2020.TestWork.Models.Student
+
+@{
+    ViewBag.Title = "GetTop5Students";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    
+<h2>Топ 5 лучших студентов по успеваемости</h2>
+
+<!--<h3>Существующие студенты</h3>-->
+<table class="table">
+    <tr>
+        <td><p>Имя</p></td>
+        <td><p>Результат на курсе C#</p></td>
+        <td><p>Результат на курсе Java</p></td>
+        <td><p>Результат на курсе C++</p></td>
+        <td><p>Результат на курсе Python</p></td>
+        <td><p>Дата начала обучения</p></td>
+    </tr>
+
+    @foreach (var c in ViewBag.Students)
+    {
+        <tr>
+            <td><p>@c.Name</p></td>
+            <td><p>@c.CourseCSResult </p></td>
+            <td><p>@c.CourseJavsResult </p></td>
+            <td><p>@c.CourseCPPResult </p></td>
+            <td><p>@c.CoursePythonResult </p></td>
+            <td><p>@c.StudentStartDate </p></td>
+        </tr>
+    }
+
+</table>

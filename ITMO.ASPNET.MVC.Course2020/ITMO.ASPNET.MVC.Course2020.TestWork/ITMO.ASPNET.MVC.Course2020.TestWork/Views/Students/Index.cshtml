@@ -1,0 +1,64 @@
+﻿@model IEnumerable<ITMO.ASPNET.MVC.Course2020.TestWork.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Список студентов</h2>
+
+<!--<p>
+    Html.ActionLink("Create New", "Create")
+</p>-->
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseCSResult)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseJavsResult)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseCPPResult)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CoursePythonResult)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentStartDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseCSResult)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseJavsResult)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseCPPResult)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CoursePythonResult)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentStartDate)
+        </td>
+        <td>
+            @Html.ActionLink("Изменить", "Edit", new { id=item.StudentId }) |
+            @Html.ActionLink("Подробнее", "Details", new { id=item.StudentId }) |
+            @Html.ActionLink("Удалить", "Delete", new { id=item.StudentId })
+        </td>
+    </tr>
+}
+
+</table>

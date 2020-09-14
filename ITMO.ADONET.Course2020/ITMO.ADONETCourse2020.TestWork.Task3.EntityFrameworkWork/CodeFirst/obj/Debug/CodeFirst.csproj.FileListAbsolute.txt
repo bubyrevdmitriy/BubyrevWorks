@@ -1,0 +1,12 @@
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task3.EntityFrameworkWork\CodeFirst\bin\Debug\CodeFirst.dll.config
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task3.EntityFrameworkWork\CodeFirst\bin\Debug\CodeFirst.dll
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task3.EntityFrameworkWork\CodeFirst\bin\Debug\CodeFirst.pdb
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task3.EntityFrameworkWork\CodeFirst\bin\Debug\EntityFramework.dll
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task3.EntityFrameworkWork\CodeFirst\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task3.EntityFrameworkWork\CodeFirst\bin\Debug\EntityFramework.xml
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task3.EntityFrameworkWork\CodeFirst\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task3.EntityFrameworkWork\CodeFirst\obj\Debug\CodeFirst.csprojAssemblyReference.cache
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task3.EntityFrameworkWork\CodeFirst\obj\Debug\CodeFirst.csproj.CoreCompileInputs.cache
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task3.EntityFrameworkWork\CodeFirst\obj\Debug\CodeFirst.csproj.CopyComplete
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task3.EntityFrameworkWork\CodeFirst\obj\Debug\CodeFirst.dll
+C:\Users\bubyr\source\repos\ITMO.ADONETCourse2020.TestWork.Task3.EntityFrameworkWork\CodeFirst\obj\Debug\CodeFirst.pdb

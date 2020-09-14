@@ -1,0 +1,10 @@
+C:\Users\bubyr\source\repos\DBCommand\DBCommand\bin\Debug\DBCommand.exe.config
+C:\Users\bubyr\source\repos\DBCommand\DBCommand\bin\Debug\DBCommand.exe
+C:\Users\bubyr\source\repos\DBCommand\DBCommand\bin\Debug\DBCommand.pdb
+C:\Users\bubyr\source\repos\DBCommand\DBCommand\obj\Debug\DBCommand.csprojAssemblyReference.cache
+C:\Users\bubyr\source\repos\DBCommand\DBCommand\obj\Debug\DBCommand.Form1.resources
+C:\Users\bubyr\source\repos\DBCommand\DBCommand\obj\Debug\DBCommand.Properties.Resources.resources
+C:\Users\bubyr\source\repos\DBCommand\DBCommand\obj\Debug\DBCommand.csproj.GenerateResource.cache
+C:\Users\bubyr\source\repos\DBCommand\DBCommand\obj\Debug\DBCommand.csproj.CoreCompileInputs.cache
+C:\Users\bubyr\source\repos\DBCommand\DBCommand\obj\Debug\DBCommand.exe
+C:\Users\bubyr\source\repos\DBCommand\DBCommand\obj\Debug\DBCommand.pdb

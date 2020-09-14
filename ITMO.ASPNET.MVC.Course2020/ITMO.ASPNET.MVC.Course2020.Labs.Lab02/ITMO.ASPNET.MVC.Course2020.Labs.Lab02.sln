@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ASPNET.MVC.Course2020.Labs.Lab02", "ITMO.ASPNET.MVC.Course2020.Labs.Lab02\ITMO.ASPNET.MVC.Course2020.Labs.Lab02.csproj", "{8A093B46-9A1A-42AC-BD82-0A4EEB0283E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A093B46-9A1A-42AC-BD82-0A4EEB0283E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A093B46-9A1A-42AC-BD82-0A4EEB0283E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A093B46-9A1A-42AC-BD82-0A4EEB0283E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A093B46-9A1A-42AC-BD82-0A4EEB0283E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FFC0D568-FD7C-4298-8135-0882C7BB2800}
+	EndGlobalSection
+EndGlobal

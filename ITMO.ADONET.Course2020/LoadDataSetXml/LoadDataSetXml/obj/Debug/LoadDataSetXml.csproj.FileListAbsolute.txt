@@ -1,0 +1,10 @@
+C:\Users\bubyr\source\repos\LoadDataSetXml\LoadDataSetXml\bin\Debug\LoadDataSetXml.exe.config
+C:\Users\bubyr\source\repos\LoadDataSetXml\LoadDataSetXml\bin\Debug\LoadDataSetXml.exe
+C:\Users\bubyr\source\repos\LoadDataSetXml\LoadDataSetXml\bin\Debug\LoadDataSetXml.pdb
+C:\Users\bubyr\source\repos\LoadDataSetXml\LoadDataSetXml\obj\Debug\LoadDataSetXml.csprojAssemblyReference.cache
+C:\Users\bubyr\source\repos\LoadDataSetXml\LoadDataSetXml\obj\Debug\LoadDataSetXml.Form1.resources
+C:\Users\bubyr\source\repos\LoadDataSetXml\LoadDataSetXml\obj\Debug\LoadDataSetXml.Properties.Resources.resources
+C:\Users\bubyr\source\repos\LoadDataSetXml\LoadDataSetXml\obj\Debug\LoadDataSetXml.csproj.GenerateResource.cache
+C:\Users\bubyr\source\repos\LoadDataSetXml\LoadDataSetXml\obj\Debug\LoadDataSetXml.csproj.CoreCompileInputs.cache
+C:\Users\bubyr\source\repos\LoadDataSetXml\LoadDataSetXml\obj\Debug\LoadDataSetXml.exe
+C:\Users\bubyr\source\repos\LoadDataSetXml\LoadDataSetXml\obj\Debug\LoadDataSetXml.pdb

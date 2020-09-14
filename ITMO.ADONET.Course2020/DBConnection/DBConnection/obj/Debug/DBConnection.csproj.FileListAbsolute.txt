@@ -1,0 +1,10 @@
+C:\Users\bubyr\source\repos\DBConnection\DBConnection\bin\Debug\DBConnection.exe.config
+C:\Users\bubyr\source\repos\DBConnection\DBConnection\bin\Debug\DBConnection.exe
+C:\Users\bubyr\source\repos\DBConnection\DBConnection\bin\Debug\DBConnection.pdb
+C:\Users\bubyr\source\repos\DBConnection\DBConnection\obj\Debug\DBConnection.Form1.resources
+C:\Users\bubyr\source\repos\DBConnection\DBConnection\obj\Debug\DBConnection.Properties.Resources.resources
+C:\Users\bubyr\source\repos\DBConnection\DBConnection\obj\Debug\DBConnection.csproj.GenerateResource.cache
+C:\Users\bubyr\source\repos\DBConnection\DBConnection\obj\Debug\DBConnection.csproj.CoreCompileInputs.cache
+C:\Users\bubyr\source\repos\DBConnection\DBConnection\obj\Debug\DBConnection.exe
+C:\Users\bubyr\source\repos\DBConnection\DBConnection\obj\Debug\DBConnection.pdb
+C:\Users\bubyr\source\repos\DBConnection\DBConnection\obj\Debug\DBConnection.csprojAssemblyReference.cache

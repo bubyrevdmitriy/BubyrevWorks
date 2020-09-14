@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.WinFormCourse2020.TestWork.Metrology", "ITMO.WinFormCourse2020.TestWork.Metrology\ITMO.WinFormCourse2020.TestWork.Metrology.csproj", "{F931BCFA-059F-458E-A9F0-A077F415783B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F931BCFA-059F-458E-A9F0-A077F415783B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F931BCFA-059F-458E-A9F0-A077F415783B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F931BCFA-059F-458E-A9F0-A077F415783B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F931BCFA-059F-458E-A9F0-A077F415783B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2841D057-57F7-479F-AF1E-DC46F0112341}
+	EndGlobalSection
+EndGlobal
