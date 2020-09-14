@@ -51,7 +51,7 @@ namespace ITMO.ASPNET.MVC.Course2020.TestWork.Controllers
         [HttpGet]
         public ActionResult CreateStudent()
         {
-            GiveCourses(); 
+            //GiveCourses(); 
             var allStudents = db.Students.ToList<Student>();
             ViewBag.Students = allStudents;
             return View();
@@ -73,7 +73,7 @@ namespace ITMO.ASPNET.MVC.Course2020.TestWork.Controllers
         [HttpGet]
         public ActionResult GetTop5Students()
         {
-            GiveCourses();            
+            //GiveCourses();            
             var allStudents = db.Students.SqlQuery("SELECT TOP 5 * FROM Students ORDER BY CourseCSResult+CourseJavsResult+CourseCPPResult+CoursePythonResult DESC").ToList<Student>();
             ViewBag.Students = allStudents;
             return View();            
@@ -83,7 +83,7 @@ namespace ITMO.ASPNET.MVC.Course2020.TestWork.Controllers
         [HttpGet]
         public ActionResult GetLow5Students()
         {
-            GiveCourses();
+            //GiveCourses();
             var allStudents = db.Students.SqlQuery("SELECT TOP 5 * FROM Students ORDER BY CourseCSResult+CourseJavsResult+CourseCPPResult+CoursePythonResult").ToList<Student>();
             ViewBag.Students = allStudents;
             return View();
