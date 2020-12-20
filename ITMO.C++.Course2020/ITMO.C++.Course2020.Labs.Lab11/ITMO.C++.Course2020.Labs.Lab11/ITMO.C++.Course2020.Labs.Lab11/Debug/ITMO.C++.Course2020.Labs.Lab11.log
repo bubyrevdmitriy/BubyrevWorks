@@ -1,0 +1,9 @@
+﻿  Main.cpp
+  main2.cpp
+  mainSortVectir.cpp
+  mainTime.cpp
+  point.cpp
+  time.cpp
+C:\Users\bubyr\source\repos\ITMO.C++.Course2020\ITMO.C++.Course2020.Labs.Lab11\ITMO.C++.Course2020.Labs.Lab11\ITMO.C++.Course2020.Labs.Lab11\time.cpp(25,22): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  Создание кода...
+  ITMO.C++.Course2020.Labs.Lab11.vcxproj -> C:\Users\bubyr\source\repos\ITMO.C++.Course2020\ITMO.C++.Course2020.Labs.Lab11\ITMO.C++.Course2020.Labs.Lab11\Debug\ITMO.C++.Course2020.Labs.Lab11.exe

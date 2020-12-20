@@ -1,0 +1,199 @@
+#include <iostream>
+#include <windows.h>
+
+using namespace std;
+//-----------------------------------------
+/*void fum_value(double k, double x, double y)//обычные параметры
+{
+	x = x + k;
+	y = y + k;
+}
+void fum_ptr(double k, double* x, double* y)//параметры указатели
+{
+	*x = *x + k;
+	*y = *y + k;
+}
+void fum_ref(double k, double &x, double &y)//параметры ссылки
+{
+	x = x + k;
+	y = y + k;
+}
+void print(double x, double y)
+{
+	cout << "x = " << x << "; y = " << y << endl;
+}
+
+int main()
+{
+	system("chcp 1251");
+	//cout << "Hello World!" << endl;
+
+	double k = 2.5;
+	double xv = 10;
+	double yv = 10;
+
+	cout << "Исходные параметры" << endl;
+	print(xv, yv);
+
+	cout << "Передача в функцию обычного параметра" << endl;
+	fum_value(k, xv, yv); // Передача в функцию обычного параметра
+	
+	print(xv, yv);
+
+	cout << "Передача в функцию параметра указателя" << endl;
+	fum_ptr(k, &xv, &yv); // Передача в функцию параметра указателя
+	print(xv, yv);
+	
+	cout << "Передача в функцию параметра ссылки" << endl;
+	fum_ref(k, xv, yv); // Передача в функцию параметра ссылки
+	print(xv, yv);
+
+	return 0;
+}*/
+
+//----------------------------------------
+/*void swap(int*, int*);//указатели
+void swap(int&, int&);//ссылки
+
+void print(double x, double y)//печать
+{
+	cout << "x = " << x << "; y = " << y << endl;
+}
+void swap(int* x, int* y)//указатели
+{
+	int temp;
+	temp = *x;
+	*x = *y;
+	*y = temp;
+}
+void swap(int& x, int& y)//ссылки
+{
+	int temp;
+	temp = x;
+	x = y;
+	y = temp;
+}
+
+int main()
+{
+	system("chcp 1251");
+	//cout << "Hello World!" << endl;
+
+	int x = 5;
+	int y = 10;
+
+	cout << "Исходные параметры" << endl;
+	print(x, y);
+
+	cout << "Передача в функцию параметра указателя" << endl;
+	swap(&x, &y); // Передача в функцию параметра указателя
+	print(x, y);
+
+	cout << "Передача в функцию параметра ссылки" << endl;
+	swap(x, y); // Передача в функцию параметра ссылки
+	print(x, y);
+
+	return 0;
+}*/
+//-----------------------------------------------------------
+//1
+int Myroot(double, double, double, double&, double&);
+
+int Myroot(double a, double b, double c, double& x1, double& x2) {
+	
+	double d = b*b-4*a*c;
+	//cout << "d = " << d << endl;
+
+	if (d >= 0) {
+		x1=(-b+sqrt(d))/(2*a);
+		x2=(-b-sqrt(d))/(2*a);
+		//cout << "x1 = " << x1 << endl;
+		//cout << "x2 = " << x2 << endl;
+	}
+
+	if (d == 0) {
+		return 0;
+	}
+	else {
+		if (d > 0) {
+			return 1;
+		} else {//d<0
+			return -1;
+		}
+	}
+
+	return 1;
+}
+
+
+
+int main()
+{
+	system("chcp 1251");
+	cout << "Функция поиска корней квадратного уравнения" << endl;
+	double a, b, c, x1, x2;
+
+	cout << "a = "; cin >> a;
+	cout << "b = "; cin >> b;
+	cout << "c = "; cin >> c;
+
+
+	x1 = 0;
+	x2 = 0;
+
+	int result = Myroot(a, b, c, x1, x2);
+	
+	if (result == 0) {
+		cout << "Дискриминант равен 0, у уравнения есть 1 корень" << endl;
+		cout << "x = "<< x1 << endl;
+	}
+	else {
+		if (result > 0) {
+			cout << "Дискриминант больше 0, у уравнения есть 2 корня" << endl;
+			cout << "x1 = " << x1 << endl;
+			cout << "x2 = " << x2 << endl;
+		}
+		else {//d<0
+			cout << "Дискриминант меньше 0, у уравнения нет корней" << endl;
+		}
+	}
+
+	return 0;
+}
+
+//-----------------------------------------------------------
+//2
+/*
+bool Input(int&, int&);//ссылки
+
+
+bool Input(int& a, int& b)//ссылки
+{
+	cout << "Функция ввода с применением ссылок" << endl;
+	cout << "пожалуйста, введите числф меньше 10, это важно!" << endl;
+	cout << "a = "; cin >> a;
+	cout << "b = "; cin >> b;
+
+	if (a<10 && b<10) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
+int main()
+{
+	system("chcp 1251");
+	int a, b;
+	if (Input(a, b) == false) // if(!Input(a,b))
+	{
+		cerr << "error";
+		return 1;
+	}
+	int s = a + b;
+	cout << "Результат: "<< s <<" = " << a <<" + "<< b << endl;
+	return 0;
+}*/
+
+//-----------------------------------------------------------

@@ -181,3 +181,4 @@ E:\GitHub\BubyrevWorks\ITMO.ASPNET.MVC.Course2020\ITMO.ASPNET.MVC.Course2020.Tes
 E:\GitHub\BubyrevWorks\ITMO.ASPNET.MVC.Course2020\ITMO.ASPNET.MVC.Course2020.TestWork\ITMO.ASPNET.MVC.Course2020.TestWork\obj\Debug\ITMO.ASPNET.MVC.Course2020.TestWork.csproj.CopyComplete
 E:\GitHub\BubyrevWorks\ITMO.ASPNET.MVC.Course2020\ITMO.ASPNET.MVC.Course2020.TestWork\ITMO.ASPNET.MVC.Course2020.TestWork\obj\Debug\ITMO.ASPNET.MVC.Course2020.TestWork.dll
 E:\GitHub\BubyrevWorks\ITMO.ASPNET.MVC.Course2020\ITMO.ASPNET.MVC.Course2020.TestWork\ITMO.ASPNET.MVC.Course2020.TestWork\obj\Debug\ITMO.ASPNET.MVC.Course2020.TestWork.pdb
+E:\GitHub\BubyrevWorks\ITMO.ASPNET.MVC.Course2020\ITMO.ASPNET.MVC.Course2020.TestWork\ITMO.ASPNET.MVC.Course2020.TestWork\obj\Debug\ITMO.ASPNET.MVC.Course2020.TestWork.csprojAssemblyReference.cache
