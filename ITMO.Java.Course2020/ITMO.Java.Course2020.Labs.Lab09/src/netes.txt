@@ -1,0 +1,39 @@
+String paramKatalog = "";
+            String paramMask = "";
+            Scanner sc = new Scanner(System.in);
+            /*int l = 0;
+            if(args.length > 0)
+            {
+                paramKatalog = args[0];
+                paramMask = args[1];
+            }
+
+            while (true)
+            {
+                if (l != 0)
+                {*/
+                    System.out.println("Enter directory");
+                    //paramKatalog = sc.nextLine();
+                    paramKatalog = "C:\\Users\\bubyr\\IdeaProjects\\ITMO.Java.Course2020.Labs.Lab09";
+                    System.out.println("Enter mask");
+                    //paramMask = sc.nextLine();
+                    paramMask = "Task3";
+
+
+
+
+                //}
+                //l++;
+                File f = new File(paramKatalog);
+                if(!f.exists())
+                {
+                    System.out.println("Not folder.");
+                    //continue;
+                }
+                if (!f.isDirectory())
+                {
+                    System.out.println("Not directory.");
+                    //continue;
+                }
+                 Serv serv = new Serv();
+                serv.list(paramKatalog, paramMask);

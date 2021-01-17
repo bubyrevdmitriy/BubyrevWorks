@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="ITMO.Java.Course2020.TestWork:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ITMO_Java_Course2020_TestWork_jar</output-path>
+    <root id="archive" name="ITMO.Java.Course2020.TestWork.jar">
+      <element id="module-output" name="ITMO.Java.Course2020.TestWork" />
+    </root>
+  </artifact>
+</component>
