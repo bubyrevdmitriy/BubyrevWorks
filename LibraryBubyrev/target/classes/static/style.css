@@ -1,0 +1,42 @@
+body {
+    color: #113;
+}
+
+.borderElement {
+    background-color: #EEDDFF;
+
+    border-radius: 25px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    height: 100%;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.content {
+    flex: 1 0 auto;
+}
+.footer {
+    flex: 0 0 auto;
+
+    background-color: #D3D3D3;
+    color: black;
+    padding: 10px 10px;
+    margin: 2px 0;
+    border: none;
+    width: 100%;
+    opacity: 0.6;
+    font-size: 12px;
+}
+
+$('.navbar-nav a:not(.dropdown-toggle)').click(function(){
+    $('#navbarsExampleDefault').collapse('hide');
+});
