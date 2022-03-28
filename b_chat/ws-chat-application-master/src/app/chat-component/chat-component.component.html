@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <h2>Users</h2>
+
+      <div class="people-list" id="people-list">
+        <div class="search">
+          <input #userName placeholder="new user" type="text"/>
+          <button (click)="registration(userName.value)">Register</button>
+          <button (click)="fetchAllUsers()">Refresh</button>
+        </div>
+        <ul class="list" id="usersList">
+          <p>Click to username to select user as yourself</p>
+          <hr>
+          <div *ngIf="isUsersDataLoaded">
+            <div class="container" *ngFor="let user of users; let i = index">
+              <p (click)="login(user)">{{user}}</p>
+            </div>
+          </div>
+        </ul>
+      </div>
+
+      <h2>Chats</h2>
+
+      <div class="chats-list" id="chat-list">
+        <div class="search">
+          <input #chatName placeholder="new chat" type="text"/>
+          <button (click)="createChat(chatName.value)">Create chat</button>
+          <button (click)="fetchAllChats()">Refresh</button>
+        </div>
+        <ul class="list" id="chatsList">
+          <p>Click to chat name to select the chat</p>
+          <hr>
+          <div *ngIf="isChatsDataLoaded">
+            <div class="container" *ngFor="let chat of chats; let i = index">
+              <p (click)="selectChat(chat)">{{chat}}</p>
+            </div>
+          </div>
+        </ul>
+      </div>
+
+
+    </div>
+    <div class="col-8">
+      <span>
+        <h2>Chat: {{fromLogin}}(me)=>{{selectedChat}}</h2>
+      </span>
+
+
+      <div class="chat">
+        <div class="chat-header clearfix">
+          <div class="chat-about">
+            <div class="chat-with" id="selectedUserId"></div>
+            <div class="chat-num-messages"></div>
+          </div>
+          <i class="fa fa-star"></i>
+        </div> <!-- end chat-header -->
+
+        <div class="chat-history">
+          <div *ngFor="let message of newMessages">
+            <span>{{message.fromLogin}}:{{message.message}}</span>
+          </div>
+
+        </div> <!-- end chat-history -->
+
+        <div class="chat-message clearfix">
+          <input #messagetosend name="message-to-send" placeholder="Type your message" rows="3"/>
+
+          <i class="fa fa-file-o"></i>
+          <i class="fa fa-file-image-o"></i>
+
+          <button id="sendBtn" (click)="send(messagetosend.value)">Send</button>
+
+        </div> <!-- end chat-message -->
+      </div>
+
+    </div>
+  </div>
+</div>
