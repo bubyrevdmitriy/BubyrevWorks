@@ -1,0 +1,22 @@
+<div *ngIf="isUserGroupPairsLoaded && userGroupPairs.length > 0; else emptyUserGroupPairsBlock">
+  <div class="post-card" *ngFor="let userGroupPair of userGroupPairs; let i = index">
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+        <app-group-small-element [userGroup]="userGroupPair.myGroup" routerLink="/groups/{{userGroupPair.myGroup.id}}">
+        </app-group-small-element>
+      </div>
+      <div *ngIf="!userGroupPair.isUserAdmin" class="d-none d-sm-none d-md-none d-lg-block col-lg-2 col-xl-2">
+        <div  class="buttons-block">
+          <button class="group-button" mat-raised-button color="accent" (click)="denyGroupPair(userGroupPair.myGroup.id, i)"><mat-icon>close</mat-icon></button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<ng-template #emptyUserGroupPairsBlock>
+  <div class="alert alert-warning group-alert" role="alert">
+    There are not group yet...
+  </div>
+</ng-template>

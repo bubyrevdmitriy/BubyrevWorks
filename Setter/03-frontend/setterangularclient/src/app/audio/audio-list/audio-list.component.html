@@ -1,0 +1,71 @@
+<div>
+  <div class="audio-address" role="alert">
+    <div *ngIf="currentPageHostCategory == 'users'">
+      <span routerLink="/{{currentPageHostCategory}}/{{currentPageId}}" > User profile page</span>
+    </div>
+    <div *ngIf="currentPageHostCategory == 'groups'">
+      <span routerLink="/{{currentPageHostCategory}}/{{currentPageId}}" >Group profile page</span>
+    </div>
+  </div>
+  <audio id="audioPlayer" controls class="col-12" #audioPlayer (ended)="audioEnded()" (pause)="audioPaused()" (play)="audioPlayed()">
+    <source src="{{audioMetadata.streamUrl}}" type="{{audioMetadata.contentType}}">
+    Your browser does not support the audio tag.
+  </audio>
+
+  <div *ngIf="isUserDataLoaded && canUploadNewAudio; else onlyReadBlock">
+    <mat-tab-group mat-align-tabs="start" dynamicHeight [(selectedIndex)]="tabIndex">
+      <mat-tab label="Audios">
+
+        <div *ngIf="isAudioFileArrayDataLoaded && audioFileArray.length > 0; else emptyAudiosBlock">
+
+          <div>
+            <mat-paginator [length]="totalAudios"
+                           [pageSize]="pageSize"
+                           [pageSizeOptions]="[3, 6, 9, 12, 24]"
+                           (page)="getPaginatorData($event)"
+                           aria-label="Select page">
+            </mat-paginator>
+          </div>
+
+          <div *ngFor="let audioFile of audioFileArray; let i = index">
+            <app-single-audio [audioFile]="audioFile"
+                              [events]="eventsSubject.asObservable()"
+                              (playRequest)="playRequestHandle($event, i)"
+                              (deleteRequest)="deleteAudioFile($event, i)" class="col-12"
+            ></app-single-audio>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Upload Audio">
+        <app-audio-upload (uploadRequest)="uploadAudioFile($event)"></app-audio-upload>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>
+<ng-template #onlyReadBlock>
+  <div *ngIf="isAudioFileArrayDataLoaded && audioFileArray.length > 0; else emptyAudiosBlock">
+
+    <div>
+      <mat-paginator [length]="totalAudios"
+                     [pageSize]="pageSize"
+                     [pageSizeOptions]="[3, 6, 9, 12, 24]"
+                     (page)="getPaginatorData($event)"
+                     aria-label="Select page">
+      </mat-paginator>
+    </div>
+
+    <div *ngFor="let audioFile of audioFileArray; let i = index">
+      <app-single-audio [audioFile]="audioFile"
+                        [events]="eventsSubject.asObservable()"
+                        (playRequest)="playRequestHandle($event, i)"
+                        (deleteRequest)="deleteAudioFile($event, i)">
+      </app-single-audio>
+    </div>
+  </div>
+</ng-template>
+<ng-template #emptyAudiosBlock class="profile-content">
+  <div class="alert alert-warning" role="alert">
+    Audios List is empty yet...
+  </div>
+</ng-template>
+

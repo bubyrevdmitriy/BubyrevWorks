@@ -1,0 +1,11 @@
+.channels-alert {
+  margin: 1rem;
+}
+.small-profile-image {
+  border-radius: 50%;
+  width: 100px;
+  border: 1px solid grey;
+}
+.channel-card {
+  margin: 1rem;
+}

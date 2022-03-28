@@ -1,0 +1,52 @@
+.channel-alert {
+  margin: 1rem;
+}
+
+.channel-photo {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.small-profile-image {
+  border-radius: 50%;
+  width: 100px;
+  border: 1px solid grey;
+}
+
+.channel-info-block {
+  margin: 1rem;
+}
+
+.channel-messages-block {
+  height: 600px;
+}
+
+.wide {
+  width: 350px;
+}
+
+.send-from-me {
+  display: inline-flex;
+  justify-content: flex-end;
+  border: 1px solid grey;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #b5f5cf;
+}
+
+.send-to-me {
+  display: inline-flex;
+  justify-content: flex-end;
+  border: 1px solid grey;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #8cd9fa;
+}
+.message-container {
+  height: 600px;
+  overflow: auto;
+  border: solid 1px black;
+  border-radius: 8px;
+}

@@ -1,0 +1,34 @@
+<div>
+  <div>
+    <div>
+      <h1>{{heading}}</h1>
+    </div>
+    <mat-dialog-content>
+      <div *ngIf="isGroupsLoaded && groups.length > 0; else emptyUserGroupBlock">
+        <div class="post-card" *ngFor="let group of groups; let i = index">
+          <div>
+            <app-group-small-element [userGroup]="group" routerLink="/groups/{{group.id}}">
+            </app-group-small-element>
+          </div>
+          <div align="end">
+            <button  mat-raised-button class="button-group-invite" color="primary" (click)="inviteUserToGroup(group.id, i)">Invite to group </button>
+          </div>
+        </div>
+
+      </div>
+      <ng-template #emptyUserGroupBlock>
+        <div class="alert alert-warning group-alert" role="alert">
+          You haven't group memberships yet, so you cannot invite users...
+        </div>
+      </ng-template>
+    </mat-dialog-content>
+  </div>
+  <mat-divider></mat-divider>
+  <div align="end">
+    <button mat-button class="button-invite-user-to-group-close" color="primary" [mat-dialog-close]="true">Close</button>
+  </div>
+</div>
+
+
+
+

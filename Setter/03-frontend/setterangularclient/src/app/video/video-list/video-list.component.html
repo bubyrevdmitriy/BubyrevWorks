@@ -1,0 +1,71 @@
+<div>
+  <div class="video-address" role="alert" *ngIf="isVideoDataLoaded">
+    <div *ngIf="currentPageHostCategory == 'users'">
+      <span routerLink="/{{currentPageHostCategory}}/{{currentPageId}}" > User profile page</span>
+    </div>
+    <div *ngIf="currentPageHostCategory == 'groups'">
+      <span routerLink="/{{currentPageHostCategory}}/{{currentPageId}}" >Group profile page</span>
+    </div>
+  </div>
+  <div *ngIf="isUserDataLoaded && canUploadNewVideo; else onlyReadBlock">
+    <mat-tab-group mat-align-tabs="start" dynamicHeight [(selectedIndex)]="tabIndex">
+      <mat-tab label="Videos">
+        <div class="video-list">
+          <div class="profile-content" *ngIf="isVideoDataLoaded && videoFiles.length > 0; else emptyVideosBlock" >
+
+            <div>
+              <mat-paginator [length]="totalVideos"
+                             [pageSize]="pageSize"
+                             [pageSizeOptions]="[3, 6, 9, 12, 24]"
+                             (page)="getPaginatorData($event)"
+                             aria-label="Select page">
+              </mat-paginator>
+            </div>
+
+            <div class="col-10" *ngFor="let videoFile of videoFiles; let i = index">
+              <app-video-preview [videoFile]="videoFile"
+                                 (deleteRequest)="deleteVideoFile($event, i)">
+              </app-video-preview></div>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Upload Video">
+        <app-video-upload (uploadRequest)="uploadVideoFile($event)"></app-video-upload>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+  <ng-template #onlyReadBlock>
+    <div class="video-list">
+      <div class="profile-content" *ngIf="isVideoDataLoaded && videoFiles.length > 0; else emptyVideosBlock">
+
+        <div>
+          <mat-paginator [length]="totalVideos"
+                         [pageSize]="pageSize"
+                         [pageSizeOptions]="[3, 6, 9, 12, 24]"
+                         (page)="getPaginatorData($event)"
+                         aria-label="Select page">
+          </mat-paginator>
+        </div>
+
+        <div class="col-4" *ngFor="let videoFile of videoFiles; let i = index">
+          <app-video-preview [videoFile]="videoFile"
+                             (deleteRequest)="deleteVideoFile($event, i)">
+          </app-video-preview>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>
+<ng-template #emptyVideosBlock class="profile-content">
+  <div class="alert alert-warning" role="alert">
+    Videos List is empty yet...
+  </div>
+</ng-template>
+
+
+
+
+
+
+
+

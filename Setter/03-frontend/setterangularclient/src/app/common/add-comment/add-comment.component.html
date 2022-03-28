@@ -1,0 +1,19 @@
+<form [formGroup]="commentForm">
+  <h2>Add comment</h2>
+
+  <div class="row comment-element">
+    <div class="col-xs-7 col-sm-7 col-md-8">
+      <input formControlName="text" id="text" type="text" class="form-control" placeholder="Comment text">
+      <!--<div *ngIf="formValue.text.touched && formValue.text.invalid" class="alert alert-danger">
+        <div *ngIf="formValue.text.errors && formValue.text.errors.required">Text is required.</div>
+      </div>-->
+    </div>
+
+    <div class="col-xs-5 col-sm-5 col-md-4">
+      <button mat-flat-button color="primary" [disabled]="commentForm.invalid" (click)="submit()">
+        Add
+      </button>
+    </div>
+  </div>
+
+</form>

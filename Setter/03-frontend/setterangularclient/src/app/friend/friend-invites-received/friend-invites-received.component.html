@@ -1,0 +1,23 @@
+<div *ngIf="isUserFriendInviteReceivedLoaded && userFriendInviteReceived.length > 0; else emptyBlock">
+  <div class="post-card" *ngFor="let userFriendInvite of userFriendInviteReceived; let i = index">
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+        <app-user-small-element [user]="userFriendInvite.myFutureFriend" routerLink="/users/{{userFriendInvite.myFutureFriend.id}}">
+        </app-user-small-element>
+      </div>
+      <div class="d-none d-sm-none d-md-none d-lg-block col-lg-2 col-xl-2">
+        <div  class="buttons-block">
+          <button class="friend-button" mat-raised-button color="primary" (click)="acceptFriendInviteFromUser(userFriendInvite.myFutureFriend.id, i)"><mat-icon>done</mat-icon></button>
+          <button class="friend-button" mat-raised-button color="accent" (click)="denyFriendInvite(userFriendInvite.myFutureFriend.id, i)"><mat-icon>close</mat-icon></button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<ng-template #emptyBlock>
+  <div class="alert alert-warning friend-alert" role="alert">
+    There are not Received Friend Invites yet...
+  </div>
+</ng-template>

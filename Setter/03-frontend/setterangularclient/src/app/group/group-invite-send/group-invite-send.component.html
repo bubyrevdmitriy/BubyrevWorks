@@ -1,0 +1,24 @@
+<div>
+  <div *ngIf="isUserGroupInviteSendLoaded && userGroupInviteSend.length > 0; else emptyUserGroupInviteSendBlock">
+    <div class="post-card" *ngFor="let userGroupInvite of userGroupInviteSend; let i = index">
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+          <app-group-invite-small-element [groupInvite]="userGroupInvite" [description]="'send'">
+          </app-group-invite-small-element>
+        </div>
+        <div class="d-none d-sm-none d-md-none d-lg-block col-lg-2 col-xl-2">
+          <div  class="buttons-block">
+            <button class="group-button" mat-raised-button color="accent" (click)="denyUserGroupInvitation(userGroupInvite.futureGroup.id, userGroupInvite.otherUser.id, i)"><mat-icon>close</mat-icon></button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <ng-template #emptyUserGroupInviteSendBlock>
+    <div class="alert alert-warning group-alert" role="alert">
+      There are not send group invites yet...
+    </div>
+  </ng-template>
+</div>

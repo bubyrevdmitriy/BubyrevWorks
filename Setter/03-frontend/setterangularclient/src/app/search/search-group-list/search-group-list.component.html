@@ -1,0 +1,23 @@
+<div>
+  <div *ngIf="isUserGroupsLoaded && userGroups.length > 0; else emptyUserGroupBlock">
+
+    <div>
+      <mat-paginator [length]="totalGroups"
+                     [pageSize]="pageSize"
+                     [pageSizeOptions]="[3, 6, 9, 12, 24]"
+                     (page)="getPaginatorData($event)"
+                     aria-label="Select page">
+      </mat-paginator>
+    </div>
+
+    <div *ngFor="let userGroup of userGroups; let i = index" >
+      <app-group-small-element [userGroup]="userGroup" routerLink="/groups/{{userGroup.id}}">
+      </app-group-small-element>
+    </div>
+  </div>
+  <ng-template #emptyUserGroupBlock>
+    <div class="alert alert-warning group-alert" role="alert">
+      There are not group yet...
+    </div>
+  </ng-template>
+</div>

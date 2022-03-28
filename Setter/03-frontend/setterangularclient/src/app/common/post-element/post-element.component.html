@@ -1,0 +1,84 @@
+<mat-card class="example-card" >
+
+  <mat-card-header *ngIf="post.userGroupAuthor!=null; else userBlock" routerLink="/groups/{{post.userGroupAuthor.id}}">
+    <img mat-card-avatar  [src]="post.userGroupAuthor.smallAvatar.imageBytes | setterImagePipe">
+    <mat-card-title>{{post.userGroupAuthor.name}}</mat-card-title>
+    <mat-card-subtitle>{{post.createdDate | setterDatePipe}}</mat-card-subtitle>
+  </mat-card-header>
+  <ng-template #userBlock class="profile-content">
+    <mat-card-header *ngIf="post.userAuthor!=null" routerLink="/users/{{post.userAuthor.id}}">
+      <img mat-card-avatar  [src]="post.userAuthor.smallAvatar.imageBytes | setterImagePipe">
+      <mat-card-title>{{post.userAuthor.firstName}} {{post.userAuthor.middleName}} {{post.userAuthor.lastName}}</mat-card-title>
+      <mat-card-subtitle>{{post.createdDate | setterDatePipe}}</mat-card-subtitle>
+    </mat-card-header>
+  </ng-template>
+  <mat-card-content>
+    <div>
+      <div *ngIf="post.commonImages.length>0">
+        <img mat-card-image class="post-image" [src]="post.commonImages[globalI].imageBytes | setterImagePipe" alt="One photo"
+             routerLink="/{{currentPageHostCategory}}/{{currentPageId}}/photos/{{post.commonImages[globalI].id}}">
+      </div>
+      <div *ngIf="post.commonImages.length>1" style="text-align: center;">
+      <span *ngFor="let commonImage of post.commonImages; let i = index" >
+        <button mat-button class="btn-change-img" (click)="changeImage(i)">
+          <mat-icon *ngIf="globalI != i">radio_button_unchecked</mat-icon>
+          <mat-icon *ngIf="globalI == i">radio_button_checked</mat-icon>
+        </button>
+      </span>
+      </div>
+    </div>
+    <p>
+      {{post.caption}}
+    </p>
+    <p *ngIf="post.likes>0" (click)="openUserLikeToPostList()">
+      likes: {{post.likes}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button *ngIf="!post.likedByLoginUser" (click)="likePost()">
+      <mat-icon >
+        favorite_border
+      </mat-icon>
+    </button>
+    <button mat-button *ngIf="post.likedByLoginUser" (click)="disLikePost()">
+      <mat-icon >
+        favorite
+      </mat-icon>
+    </button>
+    <button mat-button (click)="toggleCommentPanel()">
+      <mat-icon>
+        comment
+      </mat-icon>
+    </button>
+    <button mat-button routerLink="/{{currentPageHostCategory}}/{{currentPageId}}/posts/{{post.id}}">
+      <mat-icon>
+        source
+      </mat-icon>
+    </button>
+    <button mat-button *ngIf="post.loginUserAuthor" (click)="deletePost()">
+      <mat-icon color="warn" >
+        delete
+      </mat-icon>
+    </button>
+  </mat-card-actions>
+  <mat-expansion-panel class="mat-elevation-z0" [expanded]="commentPanelOpenState" >
+    <app-add-comment [postId]="post.id"
+                     (addCommentRequest)="addNewComment($event)"
+    >
+    </app-add-comment>
+
+    <div class="profile-content" *ngIf="isCommentDataLoaded && comments.length > 0; else emptyCommentsBlock">
+      <div class="post-search-page" *ngFor="let comment of comments; let i = index">
+        <app-comment-element [comment]="comment"
+                          (deleteRequest)="deleteComment($event, i)"
+        >
+        </app-comment-element>
+      </div>
+    </div>
+    <ng-template #emptyCommentsBlock class="profile-content">
+      <div class="alert alert-warning empty-comments" role="alert">
+        Comments is empty yet...
+      </div>
+    </ng-template>
+  </mat-expansion-panel>
+</mat-card>

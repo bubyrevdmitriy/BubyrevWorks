@@ -1,0 +1,66 @@
+.heading {
+  margin: 1rem;
+}
+
+.group-image {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 250px;
+}
+
+.example-card {
+  margin: 1rem;
+}
+
+.profile-page {
+  margin-top: 10px;
+}
+
+.profile-content {
+  margin: 5px;
+  margin-bottom: 15px;
+}
+
+.mat-button-base {
+  margin: 4px 4px 4px 0;
+  width: 250px;
+}
+
+.profile-alert {
+  margin: 4px 4px 4px 0;
+  width: 250px;
+}
+.links {
+  color: blue;
+  text-decoration: underline;
+}
+.images-first {
+  margin-top: 1.5rem;
+}
+
+.small-image-card {
+  margin: 0.1rem;
+}
+
+.center-cropped {
+  object-fit: none; /* Do not scale the image */
+  object-position: center; /* Center the image within the element */
+  border-radius: 0.5rem;
+  height: 105px;
+  width: 105px;
+  border: 1px solid #ddd;
+  margin: 0.1rem;
+}
+
+.create-post {
+  margin: 1rem;
+  background-color: #ABBAEA;
+  border-radius: 5px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.group-alert {
+  margin: 1rem;
+}

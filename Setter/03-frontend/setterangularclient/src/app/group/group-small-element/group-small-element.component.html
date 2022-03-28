@@ -1,0 +1,12 @@
+<mat-card class="post-card">
+  <div class="container">
+    <div class="row">
+    <div class="col-md-4">
+    <img mat-card-image class="small-profile-image" [src]="userGroup.smallAvatar.imageBytes | setterImagePipe">
+  </div>
+  <div class="col-md-8">
+    <mat-card-title>{{userGroup.name}}</mat-card-title>
+  </div>
+  </div>
+  </div>
+</mat-card>

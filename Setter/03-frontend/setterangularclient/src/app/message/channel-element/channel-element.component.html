@@ -1,0 +1,23 @@
+<mat-card class="channel-card" >
+  <div class="container" routerLink="/channels/{{channel.id}}">
+    <div class="row">
+      <div class="col-md-4">
+        <img *ngIf="channel.recipientUser.id == user.id" mat-card-image class="small-profile-image" [src]="channel.senderUser.smallAvatar.imageBytes | setterImagePipe">
+        <img *ngIf="channel.senderUser.id == user.id" mat-card-image class="small-profile-image" [src]="channel.recipientUser.smallAvatar.imageBytes | setterImagePipe">
+      </div>
+      <div class="col-md-8">
+        <div>
+          <mat-card-title *ngIf="channel.recipientUser.id == user.id">
+            {{channel.senderUser.firstName}} {{channel.senderUser.middleName}} {{channel.senderUser.lastName}}
+          </mat-card-title>
+          <mat-card-title *ngIf="channel.senderUser.id == user.id">
+            {{channel.recipientUser.firstName}} {{channel.recipientUser.middleName}} {{channel.recipientUser.lastName}}
+          </mat-card-title>
+        </div>
+        <div>
+          <mat-card-content>last message: {{channel.lastMessage}}</mat-card-content>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-card>

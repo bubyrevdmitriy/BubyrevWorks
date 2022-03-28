@@ -1,0 +1,97 @@
+<div class="container">
+
+  <div class="video-address" role="alert">
+    <div *ngIf="currentPageHostCategory == 'users'">
+      <span routerLink="/{{currentPageHostCategory}}/{{currentPageId}}" > User profile page</span>
+      <span> / </span>
+      <span routerLink="/{{currentPageHostCategory}}/{{currentPageId}}/videos" >User videos</span>
+    </div>
+    <div *ngIf="currentPageHostCategory == 'groups'">
+      <span routerLink="/{{currentPageHostCategory}}/{{currentPageId}}" >Group profile page</span>
+      <span>/</span>
+      <span routerLink="/{{currentPageHostCategory}}/{{currentPageId}}/videos" >Group videos</span>
+    </div>
+  </div>
+
+  <div *ngIf="isVideoLoaded; else problemVideoBlock">
+    <mat-card class="example-card">
+      <div>
+        <mat-card-header *ngIf="videoFile.userGroupAuthor!=null" routerLink="/groups/{{videoFile.userGroupAuthor.id}}">
+          <img mat-card-avatar class="example-header-image" [src]="videoFile.userGroupAuthor.smallAvatar.imageBytes | setterImagePipe">
+          <mat-card-title>{{videoFile.userGroupAuthor.name}}</mat-card-title>
+          <mat-card-subtitle>{{videoFile.createdDate | setterDatePipe}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-header *ngIf="videoFile.userAuthor!=null" routerLink="/users/{{videoFile.userAuthor.id}}">
+          <img mat-card-avatar class="example-header-image" [src]="videoFile.userAuthor.smallAvatar.imageBytes | setterImagePipe">
+          <mat-card-title>{{videoFile.userAuthor.firstName}} {{videoFile.userAuthor.middleName}} {{videoFile.userAuthor.lastName}}</mat-card-title>
+          <mat-card-subtitle>{{videoFile.createdDate | setterDatePipe}}</mat-card-subtitle>
+        </mat-card-header>
+      </div>
+      <mat-card-content>
+        <div>
+          <app-video-player [currentPageHostCategory]="currentPageHostCategory"
+                            [currentPageId]="currentPageId"
+                            [videoFile]="videoFile">
+          </app-video-player>
+          <div class="card-body">
+            <p class="card-text">{{videoFile.description}}</p>
+          </div>
+        </div>
+        <div *ngIf="videoFile.likes>0" (click)="openUserLikeToVideoFileList()">
+          likes: {{videoFile.likes}}
+        </div>
+      </mat-card-content>
+      <mat-card-actions >
+        <button mat-button *ngIf="!videoFile.likedByLoginUser" (click)="likeVideoFile()">
+          <mat-icon >
+            favorite_border
+          </mat-icon>
+        </button>
+        <button mat-button *ngIf="videoFile.likedByLoginUser" (click)="disLikeVideoFile()">
+          <mat-icon >
+            favorite
+          </mat-icon>
+        </button>
+        <button mat-button *ngIf="videoFile.loginUserAuthor" (click)="deleteVideoFile()">
+          <mat-icon color="warn" >
+            delete
+          </mat-icon>
+        </button>
+        <div *ngIf="videoFile.previousVideoFileId != null && videoFile.nextVideoFileId != null">
+          <mat-divider></mat-divider>
+          <span>
+                <button  mat-raised-button color="primary" class="post-navigate-btn" routerLink="/{{currentPageHostCategory}}/{{currentPageId}}/videos/{{videoFile.previousVideoFileId}}">Previous video</button>
+                <button  mat-raised-button color="primary" class="post-navigate-btn" routerLink="/{{currentPageHostCategory}}/{{currentPageId}}/videos/{{videoFile.nextVideoFileId}}">Next video</button>
+              </span>
+        </div>
+      </mat-card-actions>
+      <div>
+        <h3>Comments:</h3>
+        <app-add-comment [videoFileId]="videoFile.id"
+                         (addCommentRequest)="addNewComment($event)"
+        >
+        </app-add-comment>
+        <div class="profile-content" *ngIf="isCommentDataLoaded && comments.length > 0; else emptyCommentsBlock">
+          <div class="post-search-page" *ngFor="let comment of comments; let i = index">
+            <app-comment-element [comment]="comment"
+                                 (deleteRequest)="deleteComment($event, i)"
+            >
+            </app-comment-element>
+          </div>
+        </div>
+        <ng-template #emptyCommentsBlock class="profile-content">
+          <div class="alert alert-warning empty-comments" role="alert">
+            Comments is empty yet...
+          </div>
+        </ng-template>
+      </div>
+    </mat-card>
+  </div>
+
+  <ng-template #problemVideoBlock>
+    <div class="alert alert-warning video-alert" role="alert">
+      Video with id {{currentVideoId}} is not available...
+    </div>
+  </ng-template>
+
+</div>

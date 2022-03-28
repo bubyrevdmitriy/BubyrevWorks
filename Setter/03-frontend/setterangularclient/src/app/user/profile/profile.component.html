@@ -1,0 +1,213 @@
+<div>
+  <div *ngIf="isUserLoaded; else problemUserBlock" class="container profile-page">
+
+  <div>
+    <h1>{{this.userPage.firstName}} {{this.userPage.middleName}} {{this.userPage.lastName}}</h1>
+  </div>
+  <mat-divider class="heading"></mat-divider>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-lg-4">
+
+      <div *ngIf="this.isUserLoaded" routerLink="/users/{{userPage.id}}/photos/{{this.userPage.profilePhoto.id}}">
+        <img class="profile-image" *ngIf="this.isUserLoaded" [src]="this.userPage.profilePhoto.imageBytes | setterImagePipe">
+      </div>
+
+      <div *ngIf="innerWidth > 990; else userInfoBlock"></div>
+
+      <div class="profile-content" *ngIf="!this.userPage.isLoginUserPage">
+        <div *ngIf="this.userPage.isLoginUserFriend">
+          <button  mat-raised-button color="accent" (click)="endFriendshipWithUser()">End Friendship</button>
+        </div>
+        <div *ngIf="this.userPage.sendToLoginUserFriendInvite">
+          <button  mat-raised-button color="primary" (click)="acceptFriendInviteFromUser()">Accept Friend Invite</button>
+          <button  mat-raised-button color="accent" (click)="denyFriendInvite()">Deny Friend Invite</button>
+        </div>
+        <div *ngIf="this.userPage.receiveFromLoginUserFriendInvite">
+          <button  mat-raised-button color="accent" (click)="denyFriendInvite()">Deny My Friend Invite</button>
+        </div>
+        <div *ngIf="!this.userPage.receiveFromLoginUserFriendInvite && !this.userPage.sendToLoginUserFriendInvite && !this.userPage.isLoginUserFriend">
+          <button  mat-raised-button color="primary" (click)="inviteUserToFriends()">Invite to friends</button>
+        </div>
+        <div>
+          <button  mat-raised-button color="primary" (click)="textMessageToUser()">Text message</button>
+        </div>
+        <div>
+          <button  mat-raised-button color="primary" (click)="openInviteUserToGroupComponent()">Invite user to Group</button>
+        </div>
+      </div>
+
+      <div class="profile-content " *ngIf="isUserFriendPairsLoaded && userFriendPairs.length > 0; else emptyFriendsBlock" >
+        <div (click)="showUserFriendsDialog()">
+          <h3 *ngIf="!this.userPage.isLoginUserPage">{{this.userPage.firstName}} Friends:<mat-icon>open_in_new</mat-icon></h3>
+          <h3 *ngIf="this.userPage.isLoginUserPage">My Friends:<mat-icon>open_in_new</mat-icon></h3>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="links" *ngFor="let userFriendPair of userFriendPairs; let i = index">
+          <div  *ngIf="i<4" routerLink="/users/{{userFriendPair.myFriend.id}}">
+            <span>{{userFriendPair.myFriend.firstName}} {{userFriendPair.myFriend.middleName}} {{userFriendPair.myFriend.lastName}},</span>
+          </div>
+          <div  *ngIf="i==5">
+            <span (click)="showUserFriendsDialog()">...</span>
+          </div>
+        </div>
+      </div>
+      <ng-template #emptyFriendsBlock class="profile-content">
+        <div class="alert alert-warning profile-alert" role="alert">
+          Friend List is empty yet...
+        </div>
+      </ng-template>
+
+      <div class="profile-content" *ngIf="isUserGroupPairsLoaded && userGroupPairs.length > 0; else emptyGroupsBlock" >
+        <div (click)="showUserGroupsDialog()">
+          <h3 *ngIf="!this.userPage.isLoginUserPage">{{this.userPage.firstName}} Groups:<mat-icon>open_in_new</mat-icon></h3>
+          <h3 *ngIf="this.userPage.isLoginUserPage">My Groups:<mat-icon>open_in_new</mat-icon></h3>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="links" *ngFor="let userGroupPair of userGroupPairs; let i = index">
+          <div class="small-image-card" *ngIf="i<4" routerLink="/groups/{{userGroupPair.myGroup.id}}">
+            <span>{{userGroupPair.myGroup.name}},</span>
+          </div>
+          <div *ngIf="i==5" (click)="showUserGroupsDialog()">
+            <span>...</span>
+          </div>
+        </div>
+      </div>
+      <ng-template #emptyGroupsBlock class="profile-content">
+        <div class="alert alert-warning profile-alert" role="alert">
+          Group List is empty yet...
+        </div>
+      </ng-template>
+
+      <div class="profile-content" *ngIf="isAudioFileArrayDataLoaded && audioFileArray.length > 0; else emptyAudiosBlock" >
+        <div routerLink="/users/{{userPage.id}}/audios">
+          <h3 *ngIf="!this.userPage.isLoginUserPage">User Audios:</h3>
+          <h3 *ngIf="this.userPage.isLoginUserPage">My Audios:</h3>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="links" *ngFor="let audioFile of audioFileArray; let i = index">
+          <div class="small-image-card" *ngIf="i<4" routerLink="/users/{{userPage.id}}/audios">
+            <span>{{audioFile.description}},</span>
+          </div>
+          <div *ngIf="i==5" routerLink="/users/{{userPage.id}}/audios">
+            <span>...</span>
+          </div>
+        </div>
+      </div>
+      <ng-template #emptyAudiosBlock class="profile-content">
+        <div class="alert alert-warning profile-alert" role="alert">
+          Audio List is empty yet...<mat-icon *ngIf="this.userPage.isLoginUserPage" routerLink="/users/{{userPage.id}}/audios">upload</mat-icon>
+        </div>
+      </ng-template>
+
+      <div class="profile-content" *ngIf="isVideoDataLoaded && videoFiles.length > 0; else emptyVideosBlock" >
+        <div routerLink="/users/{{userPage.id}}/videos">
+          <h3 *ngIf="!this.userPage.isLoginUserPage">{{this.userPage.firstName}} Videos:</h3>
+          <h3 *ngIf="this.userPage.isLoginUserPage">My Videos:</h3>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="links" *ngFor="let videoFile of videoFiles; let i = index">
+          <div class="small-image-card" *ngIf="i<4" routerLink="/users/{{userPage.id}}/videos/{{videoFile.id}}">
+            <span>{{videoFile.description}},</span>
+          </div>
+          <div *ngIf="i==5" routerLink="/users/{{userPage.id}}/videos">
+            <span>...</span>
+          </div>
+        </div>
+      </div>
+      <ng-template #emptyVideosBlock class="profile-content">
+        <div class="alert alert-warning profile-alert" role="alert">
+          Video List is empty yet...<mat-icon *ngIf="this.userPage.isLoginUserPage" routerLink="/users/{{userPage.id}}/videos">upload</mat-icon>
+        </div>
+      </ng-template>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-lg-8">
+
+      <div *ngIf="innerWidth < 990; else userInfoBlock"></div>
+
+      <div class="profile-content" *ngIf="isCommonImagesDataLoaded && commonImages.length > 0; else emptyPhotoBlock">
+        <div routerLink="/users/{{userPage.id}}/photos">
+          <h3 *ngIf="!this.userPage.isLoginUserPage">{{this.userPage.firstName}} Photos:</h3>
+          <h3 *ngIf="this.userPage.isLoginUserPage">My Photos:</h3>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="images-first">
+          <span class="small-image-card" *ngFor="let commonImage of commonImages; let i = index">
+            <span class="small-image-card" *ngIf="i<this.commonImageAmount" routerLink="/users/{{userPage.id}}/photos/{{commonImage.id}}">
+              <img mat-card-image class="center-cropped" [src]="commonImage.imageBytes | setterImagePipe" alt="small-image">
+            </span>
+          </span>
+        </div>
+      </div>
+      <ng-template #emptyPhotoBlock class="profile-content">
+        <div class="alert alert-warning" role="alert">
+          Photo List is empty yet...
+        </div>
+      </ng-template>
+
+      <div>
+        <h3 *ngIf="!this.userPage.isLoginUserPage">{{this.userPage.firstName}} Posts:</h3>
+        <h3 *ngIf="this.userPage.isLoginUserPage">My Posts:</h3>
+      </div>
+
+      <div class="profile-content">
+        <mat-expansion-panel *ngIf="isUserLoaded && userPage.isLoginUserPage" [expanded]="createPostPanelOpenState">
+          <mat-expansion-panel-header (click)="togglePanel()">
+            <mat-panel-title>
+              <p>Create post</p>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <app-add-post (addPostRequest)="addNewPost($event)">
+          </app-add-post>
+        </mat-expansion-panel>
+      </div>
+
+      <div class="profile-content" *ngIf="isPostsDataLoaded && posts.length > 0; else emptyPostsBlock">
+
+        <div>
+          <mat-paginator [length]="totalPosts"
+                         [pageSize]="pageSize"
+                         [pageSizeOptions]="[3, 6, 9, 12, 24]"
+                         (page)="getPaginatorData($event)"
+                         aria-label="Select page">
+          </mat-paginator>
+        </div>
+
+        <div class="post-search-page" *ngFor="let post of posts; let i = index">
+          <app-post-element [post]="post"
+                            (deleteRequest)="deletePost($event, i)">
+          </app-post-element>
+        </div>
+      </div>
+      <ng-template #emptyPostsBlock class="profile-content">
+        <div class="alert alert-warning" role="alert">
+          Posts List is empty yet...
+        </div>
+      </ng-template>
+    </div>
+
+  </div>
+</div>
+
+<ng-template #userInfoBlock class="profile-content">
+  <div>
+    <h3>Short info:</h3>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div class="profile-content">
+    <p *ngIf="this.userPage.email"> Email: {{this.userPage.email}}</p>
+    <p *ngIf="this.userPage.phone">Phone: {{this.userPage.phone}}</p>
+    <p *ngIf="this.userPage.bornDate">Born date: {{this.userPage.bornDate}}</p>
+    <p *ngIf="this.userPage.bio">About me: {{this.userPage.bio}}</p>
+  </div>
+</ng-template>
+</div>
+
+<ng-template #problemUserBlock>
+  <div class="alert alert-warning user-alert" role="alert">
+    User with id {{currentUserId}} is not available...
+  </div>
+</ng-template>

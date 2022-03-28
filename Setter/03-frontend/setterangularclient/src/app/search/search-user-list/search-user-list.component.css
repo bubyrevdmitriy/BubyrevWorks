@@ -1,0 +1,9 @@
+.small-profile-image {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 100px;
+}
+.user-search-page {
+  padding-top: 1rem;
+}

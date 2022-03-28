@@ -1,0 +1,23 @@
+<div class="profile-content" *ngIf="isPostsDataLoaded && posts.length > 0; else emptyFeedBlock">
+
+  <div>
+    <mat-paginator [length]="totalPosts"
+                   [pageSize]="pageSize"
+                   [pageSizeOptions]="[3, 6, 9, 12, 24]"
+                   (page)="getPaginatorData($event)"
+                   aria-label="Select page">
+    </mat-paginator>
+  </div>
+
+  <div *ngFor="let post of posts; let i = index">
+    <app-post-element [post]="post"
+                      (deleteRequest)="deletePost($event, i)"
+    >
+    </app-post-element>
+  </div>
+</div>
+<ng-template #emptyFeedBlock >
+  <div class="alert alert-warning empty-feed-block" role="alert">
+    Feed is empty yet...
+  </div>
+</ng-template>

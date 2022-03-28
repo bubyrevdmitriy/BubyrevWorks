@@ -1,0 +1,11 @@
+.video-list {
+  margin: 1rem;
+}
+
+.video-address {
+  margin: 1rem;
+  background-color: #ABBAEA;
+  border-radius: 5px;
+  height: 40px;
+  line-height: 40px;
+}

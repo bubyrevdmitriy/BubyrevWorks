@@ -1,0 +1,24 @@
+<div>
+  <div *ngIf="isChannelsDataLoaded && channels.length > 0; else emptyChannelsBlock">
+    <div class="channel-card" *ngFor="let channel of channels; let i = index">
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+          <app-channel-element [channel]="channel" [user]="user"></app-channel-element>
+        </div>
+        <div class="d-none d-sm-none d-md-none d-lg-block col-lg-2 col-xl-2">
+          <div  class="buttons-block">
+            <button class="friend-button" mat-raised-button color="accent" (click)="denyChannel(channel.id, i)"><mat-icon>close</mat-icon></button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <ng-template #emptyChannelsBlock>
+    <div class="alert alert-warning channels-alert" role="alert">
+      There are not chats yet...
+    </div>
+  </ng-template>
+</div>

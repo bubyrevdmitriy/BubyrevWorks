@@ -1,0 +1,21 @@
+<div>
+  <mat-tab-group mat-align-tabs="start">
+
+    <mat-tab label="My Friends">
+      <app-my-friends [eventsAddNewFriendPair]="addNewFriendPair.asObservable()"></app-my-friends>
+    </mat-tab>
+
+    <mat-tab label="Received Friend Invites">
+      <app-friend-invites-received (addToMyFriendsRequest)="enterToFriends($event)"></app-friend-invites-received>
+    </mat-tab>
+
+    <mat-tab label="Send Friend Invites">
+      <app-friend-invites-send></app-friend-invites-send>
+    </mat-tab>
+
+  </mat-tab-group>
+</div>
+
+
+
+

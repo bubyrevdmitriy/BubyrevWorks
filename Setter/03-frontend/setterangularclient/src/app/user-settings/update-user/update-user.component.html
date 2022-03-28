@@ -1,0 +1,88 @@
+<div class="user-update-page" >
+  <h2>Update my information</h2>
+
+  <div style="padding-top: 2rem" class="row">
+    <div class="col">
+      <div>
+        <img class="profile-image" *ngIf="this.isUserDataLoaded" [src]="(previewImgURL) || (this.user.profilePhoto.imageBytes | setterImagePipe)" alt="user image">
+      </div>
+      <div>
+        <input type="file"
+               style="display: none"
+               #fileInput
+               (change)="onFileSelected($event)">
+        <button mat-button (click)="fileInput.click()">Pick File</button>
+        <button mat-button *ngIf="selectedFile" (click)="onUpload()">Upload</button>
+      </div>
+    </div>
+  </div>
+
+  <mat-divider style="margin: 1rem 0"></mat-divider>
+
+  <form [formGroup]="profileUpdateForm" *ngIf="isUserDataLoaded">
+    <div>
+      <div class="justify-content-center">
+
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Firstname</mat-label>
+            <input matInput [(ngModel)]="this.user.firstName"
+                   formControlName="firstName">
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Middle Name</mat-label>
+            <input matInput [(ngModel)]="this.user.middleName"
+                   formControlName="middleName">
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Lastname</mat-label>
+            <input matInput [(ngModel)]="this.user.lastName"
+                   formControlName="lastName">
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Born Date</mat-label>
+            <input matInput type="date" [(ngModel)]="this.user.bornDate"
+                   formControlName="bornDate">
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Bio</mat-label>
+            <input matInput type="text" [(ngModel)]="this.user.bio"
+                   formControlName="bio">
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Phone</mat-label>
+            <input matInput type="text" [(ngModel)]="this.user.phone"
+                   formControlName="phone">
+          </mat-form-field>
+        </div>
+
+      </div>
+
+        <div id="controls" class="row">
+          <button class="update-button" [disabled]="profileUpdateForm.invalid" (click)="submit()" mat-flat-button color="primary">
+            Update
+          </button>
+        </div>
+
+
+    </div>
+  </form>
+
+</div>
+
+

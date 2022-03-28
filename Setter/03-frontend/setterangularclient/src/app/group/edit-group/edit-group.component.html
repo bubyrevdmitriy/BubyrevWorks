@@ -1,0 +1,64 @@
+<div>
+  <div>
+    <mat-dialog-content>
+
+      <div class="group-update-page" >
+        <h2>Update group information</h2>
+
+        <div style="padding-top: 2rem" class="row">
+          <div class="col">
+            <div>
+              <img class="profile-image" [src]="previewImgURL || (this.group.profilePhoto.imageBytes | setterImagePipe)" alt="group image">
+            </div>
+            <div>
+              <input type="file"
+                     style="display: none"
+                     #fileInput
+                     (change)="onFileSelected($event)">
+              <button mat-button (click)="fileInput.click()" class="group-image-button">Pick File</button>
+              <button mat-button *ngIf="selectedFile" (click)="onUpload()" class="group-image-button">Upload</button>
+            </div>
+          </div>
+        </div>
+
+        <mat-divider style="margin: 1rem 0"></mat-divider>
+
+        <form [formGroup]="groupUpdateForm">
+          <div>
+            <div class="justify-content-center">
+              <div>
+                <mat-form-field appearance="outline">
+                  <mat-label>Group Name</mat-label>
+                  <input matInput [(ngModel)]="this.group.name"
+                         formControlName="name">
+                </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field appearance="outline">
+                  <mat-label>Group description</mat-label>
+                  <input matInput [(ngModel)]="this.group.description"
+                         formControlName="description">
+                </mat-form-field>
+              </div>
+
+            </div>
+            <div id="controls" class="row">
+              <button class="group-button" [mat-dialog-close]="true" [disabled]="groupUpdateForm.invalid" (click)="submit()" mat-flat-button color="primary">
+                Update
+              </button>
+              <button class="group-button" [mat-dialog-close]="true" (click)="deleteGroup()" mat-flat-button color="accent">
+                Delete Group
+              </button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+
+    </mat-dialog-content>
+  </div>
+  <mat-divider></mat-divider>
+  <div align="end">
+    <button mat-button class="button-invite-user-to-group-close" color="primary" [mat-dialog-close]="true">Close</button>
+  </div>
+</div>

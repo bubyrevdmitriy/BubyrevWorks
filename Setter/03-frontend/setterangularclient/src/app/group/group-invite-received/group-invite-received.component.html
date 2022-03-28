@@ -1,0 +1,56 @@
+<div>
+  <div *ngIf="isUserGroupInviteReceivedLoaded && userGroupInviteReceived.length > 0; else emptyUserGroupReceivedBlock">
+    <div class="post-card" *ngFor="let userGroupInvite of userGroupInviteReceived; let i = index">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+          <app-group-invite-small-element [groupInvite]="userGroupInvite" [description]="'received'">
+          </app-group-invite-small-element>
+        </div>
+        <div  class="d-none d-sm-none d-md-none d-lg-block col-lg-2 col-xl-2">
+          <div  class="buttons-block">
+            <button class="group-button" mat-raised-button color="primary" (click)="acceptUserGroupInvitation(userGroupInvite.futureGroup.id, userGroupInvite.otherUser.id, i)"><mat-icon>done</mat-icon></button>
+            <button class="group-button" mat-raised-button color="accent" (click)="denyUserGroupInvitation(userGroupInvite.futureGroup.id, userGroupInvite.otherUser.id, i)"><mat-icon>close</mat-icon></button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!--<mat-card class="post-card" *ngFor="let userGroupInvite of userGroupInviteReceived; let i = index">
+      <mat-card-header >
+        <div>
+          <mat-card-title routerLink="/users/{{userGroupInvite.otherUser.id}}">
+            You receive Group Invite from:   {{userGroupInvite.otherUser.firstName}} {{userGroupInvite.otherUser.middleName}} {{userGroupInvite.otherUser.lastName}}
+          </mat-card-title>
+        </div>
+        <div>
+          <mat-card-title routerLink="/users/{{userGroupInvite.otherUser.id}}">
+          You send Group Invite to:   {{userGroupInvite.otherUser.firstName}} {{userGroupInvite.otherUser.middleName}} {{userGroupInvite.otherUser.lastName}}
+        </mat-card-title>
+        </div>
+
+      </mat-card-header>
+      <div class="container group-short-info" routerLink="/groups/{{userGroupInvite.futureGroup.id}}">
+        <div class="row">
+          <div class="col-md-4">
+            <img mat-card-image class="small-group-image" [src]="userGroupInvite.futureGroup.smallAvatar.imageBytes | setterImagePipe">
+          </div>
+          <div class="col-md-8">
+            <mat-card-title>{{userGroupInvite.futureGroup.name}}</mat-card-title>
+          </div>
+        </div>
+      </div>
+      <mat-card-actions>
+        <div align="end">
+          <button  mat-raised-button color="primary" (click)="acceptUserGroupInvitation(userGroupInvite.futureGroup.id, userGroupInvite.otherUser.id, i)">ACCEPT</button>
+          <button  mat-raised-button color="primary" (click)="denyUserGroupInvitation(userGroupInvite.futureGroup.id, userGroupInvite.otherUser.id, i)">DELETE</button>
+        </div>
+      </mat-card-actions>
+    </mat-card>-->
+  </div>
+  <ng-template #emptyUserGroupReceivedBlock>
+    <div class="alert alert-warning group-alert" role="alert">
+      There are not received group invites yet...
+    </div>
+  </ng-template>
+</div>

@@ -1,0 +1,32 @@
+<div>
+  <audio id="audioPlayer" controls class="audio-player col-12" #audioPlayer>
+    <source src="{{audioMetadata.streamUrl}}" type="{{audioMetadata.contentType}}" (ended)="audioEnded()">
+    Your browser does not support the audio tag.
+  </audio>
+
+
+
+  <div *ngIf="isAudioFileArrayDataLoaded && audioFileArray.length > 0; else emptyAudiosBlock">
+
+    <div>
+      <mat-paginator [length]="totalAudios"
+                     [pageSize]="pageSize"
+                     [pageSizeOptions]="[3, 6, 9, 12, 24]"
+                     (page)="getPaginatorData($event)"
+                     aria-label="Select page">
+      </mat-paginator>
+    </div>
+
+    <div *ngFor="let audioFile of audioFileArray; let i = index">
+      <app-single-audio [audioFile]="audioFile"
+                        (playRequest)="playArray(i)"
+                        (deleteRequest)="deleteAudioFile($event, i)"
+      ></app-single-audio>
+    </div>
+  </div>
+</div>
+<ng-template #emptyAudiosBlock class="profile-content">
+  <div class="alert alert-warning" role="alert">
+    Audios List is empty yet...
+  </div>
+</ng-template>

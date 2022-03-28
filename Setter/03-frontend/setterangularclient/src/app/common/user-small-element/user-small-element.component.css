@@ -1,0 +1,15 @@
+.small-profile-image {
+  border: 1px solid #ddd;
+  padding: 5px;
+
+  width: 150px;
+  border-radius: 50%;
+  }
+
+.post-card {
+  margin: 2rem;
+}
+
+.channel-info-block {
+  margin: 50px;
+}

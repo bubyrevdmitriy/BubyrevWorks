@@ -1,0 +1,26 @@
+<mat-card class="post-card">
+  <mat-card-header >
+    <div *ngIf="description == 'received'">
+      <mat-card-title>
+        You receive Group Invite from:
+        <span class="user-name-link" routerLink="/users/{{groupInvite.otherUser.id}}">{{groupInvite.otherUser.firstName}} {{groupInvite.otherUser.middleName}} {{groupInvite.otherUser.lastName}}</span>
+      </mat-card-title>
+    </div>
+    <div  *ngIf="description == 'send'">
+      <mat-card-title>
+        You send Group Invite to:
+        <span class="user-name-link" routerLink="/users/{{groupInvite.otherUser.id}}">{{groupInvite.otherUser.firstName}} {{groupInvite.otherUser.middleName}} {{groupInvite.otherUser.lastName}}</span>
+      </mat-card-title>
+    </div>
+  </mat-card-header>
+  <div class="container group-short-info" routerLink="/groups/{{groupInvite.futureGroup.id}}">
+    <div class="row">
+      <div class="col-md-4">
+        <img mat-card-image class="small-group-image" [src]="groupInvite.futureGroup.smallAvatar.imageBytes | setterImagePipe">
+      </div>
+      <div class="col-md-8">
+        <mat-card-title>{{groupInvite.futureGroup.name}}</mat-card-title>
+      </div>
+    </div>
+  </div>
+</mat-card>

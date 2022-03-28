@@ -1,0 +1,23 @@
+<div>
+  <div>
+    <div>
+      <h1>{{heading}}</h1>
+    </div>
+    <mat-dialog-content *ngIf="isDataLoaded">
+      <div *ngFor="let userPair of userPairs; let i = index" >
+        <div routerLink="/users/{{userPair.user.id}}" [mat-dialog-close]="true">
+          <app-user-small-element [user] = userPair.user >
+          </app-user-small-element>
+        </div>
+        <span *ngIf="group.isLoginUserAdmin">
+          <button *ngIf="this.group.isLoginUserAdmin && !userPair.isUserAdmin" mat-raised-button color="accent" class="user-button" (click)="kickUserFromGroup(userPair.user.id)">Kick from group</button>
+          <button *ngIf="userPair.user.id != this.user.id && !userPair.isUserAdmin" mat-raised-button color="primary" class="user-button" (click)="makeUserNewAdmin(userPair.user.id)">Add to admins</button>
+        </span>
+      </div>
+    </mat-dialog-content>
+  </div>
+  <mat-divider></mat-divider>
+  <div align="end">
+    <button mat-button class="button-invite-user-to-group-close" color="primary" (click)="closeForm()">Close</button>
+  </div>
+</div>

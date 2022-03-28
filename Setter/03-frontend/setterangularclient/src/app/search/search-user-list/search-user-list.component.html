@@ -1,0 +1,15 @@
+<div *ngIf="isUserDataLoaded" class="user-search-page" >
+  <div>
+    <mat-paginator [length]="totalUsers"
+                   [pageSize]="pageSize"
+                   [pageSizeOptions]="[3, 6, 9, 12, 24]"
+                   (page)="getPaginatorData($event)"
+                   aria-label="Select page">
+    </mat-paginator>
+  </div>
+
+  <div *ngFor="let user of users; let i = index" >
+    <app-user-small-element [user] = user routerLink="/users/{{user.id}}">
+    </app-user-small-element>
+  </div>
+</div>

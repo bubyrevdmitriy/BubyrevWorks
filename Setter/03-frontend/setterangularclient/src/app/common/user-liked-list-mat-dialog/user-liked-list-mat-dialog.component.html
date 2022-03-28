@@ -1,0 +1,17 @@
+<div>
+  <div>
+    <div>
+      <h1>{{heading}}</h1>
+    </div>
+    <mat-dialog-content>
+      <div *ngFor="let userLiked of userLikedList; let i = index">
+        <app-user-small-element [user] = userLiked >
+        </app-user-small-element>
+      </div>
+    </mat-dialog-content>
+  </div>
+  <mat-divider></mat-divider>
+  <div align="end">
+    <button mat-button class="button-invite-user-to-group-close" color="primary" [mat-dialog-close]="true">Close</button>
+  </div>
+</div>

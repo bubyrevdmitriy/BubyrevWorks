@@ -1,0 +1,33 @@
+<div class="container">
+
+  <h2>Upload new Audio</h2>
+
+  <form [formGroup]="audioUploadForm">
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input formControlName="description" id="description" type="text" class="form-control">
+      <div *ngIf="formValue.description.touched && formValue.description.invalid" class="alert alert-danger">
+        <div *ngIf="formValue.description.errors && formValue.description.errors.required">Description is required</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="file">File</label>
+      <input formControlName="file" id="file" type="file" class="form-control-file" multiple=""
+             (change)="onFileChange($event)">
+    </div>
+
+    <div *ngIf="isLoadingProcess" align="center" class="custom-spinner">
+      <mat-spinner></mat-spinner>
+    </div>
+
+    <div>
+      <button mat-flat-button class="audio-submit-button" color="primary" [disabled]="audioUploadForm.invalid || isLoadingProcess" (click)="submitNewAudio()">
+        Submit
+      </button>
+    </div>
+
+  </form>
+
+</div>

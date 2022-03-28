@@ -1,0 +1,38 @@
+<div class="container">
+
+      <h2>Create Post</h2>
+
+      <form [formGroup]="postForm" >
+
+        <div class="form-group">
+          <label for="caption">Caption</label>
+          <input formControlName="caption" id="caption" type="text" class="form-control">
+          <div *ngIf="formValue.caption.touched && formValue.caption.invalid" class="alert alert-danger">
+            <div *ngIf="formValue.caption.errors && formValue.caption.errors.required">Caption is required.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="file">File</label>
+          <input formControlName="file" id="file" type="file" class="form-control-file" multiple=""
+                 (change)="onFileChange($event)">
+        </div>
+
+        <div class="preview-wrapper">
+          <div class="img-preview" *ngFor='let url of images'>
+            <img [src]="url" width="200px">
+            <button mat-flat-button class="post-submit-button" color="warn" (click)="removeImage(url)">Remove</button>
+          </div>
+        </div>
+
+        <div style="text-align: left" >
+          <button mat-flat-button class="post-submit-button" color="primary" [disabled]="postForm.invalid" (click)="submit()">
+            Create Post
+          </button>
+        </div>
+
+      </form>
+
+</div>
+
+

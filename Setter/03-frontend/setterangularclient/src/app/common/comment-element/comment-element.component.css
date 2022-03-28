@@ -1,0 +1,10 @@
+.small-profile-image {
+  border: 1px solid #ddd;
+  padding: 5px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.comment-element {
+  margin: 1rem;
+}

@@ -1,0 +1,40 @@
+.photo-card {
+  margin: 0.5rem;
+  width: 275px;
+  float: left;
+}
+
+.example-card {
+  max-width: 300px;
+  margin: 0.5rem;
+  float: left;
+}
+
+.img-center{
+  position:absolute;
+  clip:rect(0,73px,73px,0);
+}
+
+.center-cropped {
+  object-fit: none; /* Do not scale the image */
+  object-position: center; /* Center the image within the element */
+
+  height: 275px;
+  width: 275px;
+}
+
+.image-alert {
+  margin: 1rem;
+}
+
+.image-address {
+  margin: 1rem;
+  background-color: #ABBAEA;
+  border-radius: 5px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.btn-change-img {
+  text-align: center;
+}

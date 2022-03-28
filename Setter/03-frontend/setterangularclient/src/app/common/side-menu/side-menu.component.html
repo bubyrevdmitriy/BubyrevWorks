@@ -1,0 +1,77 @@
+<div *ngIf="isDataLoaded">
+
+  <div>
+    <button routerLink="/users/{{this.user.id}}" mat-icon-button class="example-icon favorite-icon" [ngClass]="{'active-link': currentRoute === 'userPage'}"
+            (click)="changeRoute('userPage')">
+      <mat-icon [ngClass]="{'active-link': currentRoute === 'userPage'}">home</mat-icon> My Page
+    </button>
+  </div>
+
+  <div>
+    <button routerLink="/feed" mat-icon-button class="example-icon favorite-icon" [ngClass]="{'active-link': currentRoute === 'feed'}"
+            (click)="changeRoute('feed')">
+      <mat-icon [ngClass]="{'active-link': currentRoute === 'feed'}">feed</mat-icon> My News
+    </button>
+  </div>
+
+  <div>
+    <button routerLink="/channels" mat-icon-button class="example-icon favorite-icon" [ngClass]="{'active-link': currentRoute === 'channels'}"
+            (click)="changeRoute('channels')">
+      <mat-icon [ngClass]="{'active-link': currentRoute === 'channels'}">question_answer</mat-icon> My Messages
+    </button>
+  </div>
+
+  <div>
+    <button  routerLink="/friends" mat-icon-button class="example-icon favorite-icon" [ngClass]="{'active-link': currentRoute === 'friends'}"
+             (click)="changeRoute('friends')">
+      <mat-icon [ngClass]="{'active-link': currentRoute === 'friends'}">person</mat-icon> My Friends
+    </button>
+  </div>
+
+  <div>
+    <button  routerLink="/groups" mat-icon-button class="example-icon favorite-icon" [ngClass]="{'active-link': currentRoute === 'groups'}"
+             (click)="changeRoute('groups')">
+      <mat-icon [ngClass]="{'active-link': currentRoute === 'groups'}">group</mat-icon> My Groups
+    </button>
+  </div>
+
+  <div>
+    <button  routerLink="/users/{{this.user.id}}/photos" mat-icon-button class="example-icon favorite-icon" [ngClass]="{'active-link': currentRoute === 'photos'}"
+             (click)="changeRoute('photos')">
+      <mat-icon [ngClass]="{'active-link': currentRoute === 'photos'}">collections</mat-icon> My Photos
+    </button>
+  </div>
+
+  <div>
+    <button  routerLink="/users/{{this.user.id}}/audios" mat-icon-button class="example-icon favorite-icon" [ngClass]="{'active-link': currentRoute === 'audios'}"
+             (click)="changeRoute('audios')">
+      <mat-icon [ngClass]="{'active-link': currentRoute === 'audios'}">library_music</mat-icon> My Audios
+    </button>
+  </div>
+
+  <div>
+    <button  routerLink="/users/{{this.user.id}}/videos" mat-icon-button class="example-icon favorite-icon" [ngClass]="{'active-link': currentRoute === 'videos'}"
+             (click)="changeRoute('videos')">
+      <mat-icon [ngClass]="{'active-link': currentRoute === 'videos'}">video_library</mat-icon> My Video
+    </button>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div>
+    <button  routerLink="/search" mat-icon-button class="example-icon favorite-icon" [ngClass]="{'active-link': currentRoute === 'search'}"
+             (click)="changeRoute('search')">
+      <mat-icon [ngClass]="{'active-link': currentRoute === 'search'}">search</mat-icon> Search
+    </button>
+  </div>
+  <mat-divider></mat-divider>
+
+  <div>
+    <button  routerLink="/settings" mat-icon-button class="example-icon favorite-icon" [ngClass]="{'active-link': currentRoute === 'settings'}"
+             (click)="changeRoute('settings')">
+      <mat-icon [ngClass]="{'active-link': currentRoute === 'settings'}">settings</mat-icon> Settings
+    </button>
+  </div>
+
+</div>
+

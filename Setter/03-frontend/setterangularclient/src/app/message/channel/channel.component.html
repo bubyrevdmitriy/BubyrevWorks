@@ -1,0 +1,82 @@
+<div>
+
+  <div *ngIf="isAvailableChannel; else problemChannelBlock">
+
+    <div class="container channel-info-block" *ngIf="isOtherUserLoaded">
+      <div class="row">
+        <div class="col-md-8">
+          <h2>{{otherUser.firstName}} {{otherUser.middleName}} {{otherUser.lastName}}</h2>
+        </div>
+        <div class="col-md-4" align="right">
+          <img  class="small-profile-image" [src]="otherUser.smallAvatar.imageBytes | setterImagePipe">
+        </div>
+      </div>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <div class="container channel-info-block channel-messages-block" *ngIf="isMessagesDataLoaded && messages.length > 0; else messagesEmptyBlock">
+      <div class="d-flex flex-column">
+        <div class="container message-container" #messageContainer>
+          <div class="message" *ngFor="let message of messages; let i = index">
+
+            <div *ngIf="message.senderId == currentUserId" align="left">
+              <div class="send-from-me">
+                {{message.content}}
+              </div>
+              <div>
+                <span>
+                  <!--<button mat-button class="btn-change-img" (click)="deleteMessage(message.id, i)">
+                    <mat-icon color="warn">close</mat-icon>
+                  </button>-->
+                  {{message.createdDate | setterDateOnlyHHMMPipe}}
+                </span>
+
+              </div>
+            </div>
+            <div *ngIf="message.senderId != currentUserId" align="right">
+              <div class="send-to-me" >
+                {{message.content}}
+              </div>
+              <div>
+                {{message.createdDate | setterDateOnlyHHMMPipe}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <div class="container channel-info-block">
+      <form [formGroup]="messageFormGroup">
+        <div class="row">
+          <div class="col-md-10">
+            <mat-form-field appearance="outline" class="wide">
+              <mat-label>Message</mat-label>
+              <input matInput type="text"
+                     formControlName="content">
+            </mat-form-field>
+          </div>
+          <div class="col-md-2">
+            <button style="width: 40%" [disabled]="messageFormGroup.invalid" (click)="submit()" mat-flat-button color="primary">
+              Send
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <ng-template #problemChannelBlock>
+    <div class="alert alert-warning channel-alert" role="alert">
+      Chat is not available...
+    </div>
+  </ng-template>
+  <ng-template #messagesEmptyBlock>
+    <div class="alert alert-warning channel-alert" role="alert">
+      There is no messages yet...
+    </div>
+  </ng-template>
+
+</div>

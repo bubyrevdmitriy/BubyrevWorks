@@ -1,0 +1,23 @@
+.friend-alert {
+  margin: 1rem;
+}
+
+.small-profile-image {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 100px;
+  margin: 1rem;
+  margin-top: 2rem;
+}
+
+.post-card {
+  margin: 1rem;
+}
+
+.buttons-block {
+  margin: 2rem;
+  text-align: center;
+}
+
+

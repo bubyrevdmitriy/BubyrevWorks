@@ -1,0 +1,17 @@
+<div>
+  <div>
+    <div>
+      <h1>{{heading}}</h1>
+    </div>
+    <mat-dialog-content>
+      <div *ngFor="let userFriendPair of userFriendPairs; let i = index" routerLink="/users/{{userFriendPair.myFriend.id}}" [mat-dialog-close]="true">
+        <app-user-small-element [user] = userFriendPair.myFriend >
+        </app-user-small-element>
+      </div>
+    </mat-dialog-content>
+  </div>
+  <mat-divider></mat-divider>
+  <div align="end">
+    <button mat-button class="button-invite-user-to-group-close" color="primary" [mat-dialog-close]="true">Close</button>
+  </div>
+</div>

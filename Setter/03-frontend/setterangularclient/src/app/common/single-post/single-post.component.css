@@ -1,0 +1,23 @@
+.example-card {
+  margin: 1rem;
+}
+
+.post-alert {
+  margin: 1rem;
+}
+
+.post-address {
+  margin: 1rem;
+  background-color: #ABBAEA;
+  border-radius: 5px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.post-navigate-btn {
+  margin: 1rem;
+}
+
+.empty-comments {
+  margin: 1rem;
+}

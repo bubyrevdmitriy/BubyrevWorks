@@ -1,0 +1,30 @@
+.group-update-page {
+  text-align: center;
+  margin: 1rem;
+}
+#controls {
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+}
+
+mat-form-field {
+  width: 50%;
+}
+
+.profile-image {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 250px;
+}
+
+.group-button {
+  padding: 5px;
+  margin: 0.1rem;
+  width: 49%;
+}
+
+.group-image-button {
+  margin: 1rem;
+}

@@ -1,0 +1,23 @@
+<div class="video-list">
+  <div class="profile-content" *ngIf="isVideoDataLoaded && videoFiles.length > 0; else emptyVideosBlock" >
+
+    <div>
+      <mat-paginator [length]="totalVideos"
+                     [pageSize]="pageSize"
+                     [pageSizeOptions]="[3, 6, 9, 12, 24]"
+                     (page)="getPaginatorData($event)"
+                     aria-label="Select page">
+      </mat-paginator>
+    </div>
+
+    <div class="col-10" *ngFor="let videoFile of videoFiles; let i = index">
+      <app-video-preview [videoFile]="videoFile"
+                         (deleteRequest)="deleteVideoFile($event, i)">
+      </app-video-preview></div>
+  </div>
+</div>
+<ng-template #emptyVideosBlock class="profile-content">
+  <div class="alert alert-warning" role="alert">
+    Videos List is empty yet...
+  </div>
+</ng-template>

@@ -1,0 +1,21 @@
+<div>
+    <mat-tab-group mat-align-tabs="start" dynamicHeight>
+      <mat-tab label="My Groups">
+        <app-group-pairs [eventsAddNewGroupPair]="addNewGroupPair.asObservable()"></app-group-pairs>
+      </mat-tab>
+
+      <mat-tab label="Received Group Invites">
+        <app-group-invite-received (enterInGroupRequest)="enterInGroup($event)"></app-group-invite-received>
+      </mat-tab>
+
+      <mat-tab label="Send Group Invites">
+        <app-group-invite-send></app-group-invite-send>
+      </mat-tab>
+
+      <mat-tab label="Create Group">
+        <div>
+          <app-create-group></app-create-group>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+</div>

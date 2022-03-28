@@ -1,0 +1,82 @@
+<div>
+  <div *ngIf="isCommonImageDataLoaded; else problemImageBlock">
+    <div class="image-address" role="alert">
+      <div *ngIf="currentPageHostCategory == 'users'">
+        <span routerLink="/{{currentPageHostCategory}}/{{currentPageId}}" > User profile page</span>
+        <span> / </span>
+        <span routerLink="/{{currentPageHostCategory}}/{{currentPageId}}/photos" >User photos</span>
+      </div>
+      <div *ngIf="currentPageHostCategory == 'groups'">
+        <span routerLink="/{{currentPageHostCategory}}/{{currentPageId}}" >Group profile page</span>
+        <span>/</span>
+        <span routerLink="/{{currentPageHostCategory}}/{{currentPageId}}/photos" >Group photos</span>
+      </div>
+    </div>
+
+    <mat-card class="photo-card">
+
+      <mat-card-content>
+        <div *ngIf="isCommonImageDataLoaded">
+          <img mat-card-image class="big-photo" [src]="commonImageInAlbum.imageBytes | setterImagePipe">
+        </div>
+
+        <div *ngIf="commonImageInAlbum.likes>0" (click)="openUserLikeToCommonImageList()">
+          likes: {{commonImageInAlbum.likes}}
+        </div>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button mat-button *ngIf="!commonImageInAlbum.likedByLoginUser" (click)="likeCommonImage()">
+          <mat-icon>
+            favorite_border
+          </mat-icon>
+        </button>
+        <button mat-button *ngIf="commonImageInAlbum.likedByLoginUser" (click)="disLikeCommonImage()">
+          <mat-icon>
+            favorite
+          </mat-icon>
+        </button>
+        <button mat-button *ngIf="commonImageInAlbum.loginUserAuthor" (click)="deleteCommonImage()">
+          <mat-icon color="warn" >
+            delete
+          </mat-icon>
+        </button>
+        <div *ngIf="commonImageInAlbum.previousImageId != null && commonImageInAlbum.nextImageId != null">
+            <span>
+              <button  mat-raised-button color="primary" class="photo-btn" routerLink="/{{currentPageHostCategory}}/{{currentPageId}}/photos/{{commonImageInAlbum.previousImageId}}">Previous photo</button>
+              <button  mat-raised-button color="primary" class="photo-btn" routerLink="/{{currentPageHostCategory}}/{{currentPageId}}/photos/{{commonImageInAlbum.nextImageId}}">Next photo</button>
+            </span>
+        </div>
+      </mat-card-actions>
+
+      <mat-divider></mat-divider>
+      <div>
+        <h3>Comments:</h3>
+        <app-add-comment [commonImageId]="commonImageInAlbum.id"
+                         (addCommentRequest)="addNewComment($event)"
+        >
+        </app-add-comment>
+        <div class="profile-content" *ngIf="isCommentDataLoaded && comments.length > 0; else emptyCommentsBlock">
+          <div class="post-search-page" *ngFor="let comment of comments; let i = index">
+            <app-comment-element [comment]="comment"
+                                 (deleteRequest)="deleteComment($event, i)"
+            >
+            </app-comment-element>
+          </div>
+        </div>
+        <ng-template #emptyCommentsBlock class="profile-content">
+          <div class="alert alert-warning empty-comments" role="alert">
+            Comments is empty yet...
+          </div>
+        </ng-template>
+      </div>
+    </mat-card>
+
+  </div>
+
+  <ng-template #problemImageBlock>
+    <div class="alert alert-warning image-alert" role="alert">
+      Image with id {{currentCommonImageId}} is not available...
+    </div>
+  </ng-template>
+</div>

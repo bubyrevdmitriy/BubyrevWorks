@@ -1,0 +1,53 @@
+<div class="container">
+
+  <h2>Upload new Video</h2>
+
+  <form [formGroup]="videoUploadForm">
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input formControlName="description" id="description" type="text" class="form-control">
+      <div *ngIf="formValue.description.touched && formValue.description.invalid" class="alert alert-danger">
+        <div *ngIf="formValue.description.errors && formValue.description.errors.required">Description is required</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="file">File</label>
+      <input formControlName="file" id="file" type="file" class="form-control-file" multiple=""
+             (change)="onFileChange($event)">
+    </div>
+
+
+    <div style="padding-top: 1rem" class="row">
+      <div class="col">
+        <div>
+          <h3>Select preview (if you don't chose preview service will try pick first frame from video)</h3>
+        </div>
+        <div>
+          <img class="video-image" *ngIf="isPreviewImgURLLoaded" [src]="previewImgURL" alt="Pick preview image to video">
+        </div>
+        <div>
+          <input type="file"
+                 style="display: none"
+                 #fileInput
+                 (change)="onFileSelected($event)">
+          <button mat-button (click)="fileInput.click()">Pick File</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div *ngIf="isLoadingProcess" align="center" class="custom-spinner">
+      <mat-spinner></mat-spinner>
+    </div>
+
+    <div>
+      <button mat-flat-button class="video-submit-button" color="primary" [disabled]="videoUploadForm.invalid || isLoadingProcess" (click)="submitNewVideo()">
+        Submit
+      </button>
+    </div>
+
+  </form>
+
+</div>

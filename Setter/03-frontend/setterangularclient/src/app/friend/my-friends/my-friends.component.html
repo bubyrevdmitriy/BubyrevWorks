@@ -1,0 +1,22 @@
+<div *ngIf="isUserPairsLoaded && userPairs.length > 0; else emptyUserPairsBlock">
+  <div  class="post-card" *ngFor="let userPair of userPairs; let i = index">
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+        <app-user-small-element [user]="userPair.myFriend" routerLink="/users/{{userPair.myFriend.id}}">
+        </app-user-small-element>
+      </div>
+      <div class="d-none d-sm-none d-md-none d-lg-block col-lg-2 col-xl-2">
+        <div  class="buttons-block">
+          <button class="friend-button" mat-raised-button color="accent" (click)="denyFriendPair(userPair.myFriend.id, i)"><mat-icon>close</mat-icon></button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<ng-template #emptyUserPairsBlock>
+  <div class="alert alert-warning friend-alert" role="alert">
+    There are not friends yet...
+  </div>
+</ng-template>

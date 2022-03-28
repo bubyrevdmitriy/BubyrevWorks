@@ -1,0 +1,59 @@
+.post-image {
+
+}
+
+.border-grey{
+  border-radius: 4px;
+  padding: 1px;
+  border: solid 1px #D3D3D3;
+}
+
+.example-card {
+  margin: 1rem;
+  max-width: 600px;
+}
+
+.profile-page {
+  margin-top: 10px;
+}
+
+.profile-content {
+  margin: 5px;
+}
+
+.mat-button-base {
+  margin: 4px 4px 4px 0;
+  max-width: 180px;
+}
+
+.profile-alert {
+  margin: 4px 4px 4px 0;
+  width: 250px;
+}
+
+.images-first {
+  margin-top: 1.5rem;
+}
+
+.small-image-card {
+  margin: 0.1rem;
+}
+
+.center-cropped {
+  object-fit: none; /* Do not scale the image */
+  object-position: center; /* Center the image within the element */
+  border-radius: 0.5rem;
+  height: 105px;
+  width: 105px;
+  border: 1px solid #ddd;
+  margin: 0.1rem;
+}
+
+.comment-list-panel{
+  margin: 0;
+  border: 0;
+}
+
+.empty-comments {
+  margin: 1rem;
+}

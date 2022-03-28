@@ -1,0 +1,44 @@
+<div>
+  <div class="search-block row">
+    <div class="col-md-8">
+      <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>search</mat-label>
+        <input  matInput #searchField (keyup.enter)="doSearch(searchField.value)">
+      </mat-form-field>
+    </div>
+    <div class="col-md-4">
+      <button style="width: 60%"  (click)="doSearch(searchField.value)" mat-flat-button color="primary">
+        search
+      </button>
+    </div>
+  </div>
+
+  <mat-tab-group mat-align-tabs="start" dynamicHeight>
+
+    <mat-tab label="Users">
+      <app-search-user-list [events]="eventsSubject.asObservable()">
+      </app-search-user-list>
+    </mat-tab>
+
+    <mat-tab label="Posts">
+      <app-search-post-list [events]="eventsSubject.asObservable()">
+      </app-search-post-list>
+    </mat-tab>
+
+    <mat-tab label="Groups">
+      <app-search-group-list [events]="eventsSubject.asObservable()">
+      </app-search-group-list>
+    </mat-tab>
+
+    <mat-tab label="Audios">
+      <app-search-audio-list [events]="eventsSubject.asObservable()">
+      </app-search-audio-list>
+    </mat-tab>
+
+    <mat-tab label="Videos">
+      <app-search-video-list [events]="eventsSubject.asObservable()">
+      </app-search-video-list>
+    </mat-tab>
+
+  </mat-tab-group>
+</div>

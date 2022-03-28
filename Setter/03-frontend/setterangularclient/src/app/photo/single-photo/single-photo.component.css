@@ -1,0 +1,33 @@
+.photo-card {
+  margin: 1rem;
+}
+
+.big-photo {
+  /*margin: 1rem;
+  max-width: 800px;
+  border-radius: 5px;
+  padding: 5px;*/
+}
+
+.photo-btn {
+  margin: 1rem;
+}
+
+.image-address {
+  margin: 1rem;
+  background-color: #ABBAEA;
+  border-radius: 5px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.image-alert {
+  margin: 1rem;
+}
+.empty-comments {
+  margin: 1rem;
+}
+
+.next-buttons-block {
+  margin-top: 1rem;
+}

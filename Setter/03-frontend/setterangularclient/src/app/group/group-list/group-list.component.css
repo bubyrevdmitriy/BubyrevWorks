@@ -1,0 +1,20 @@
+.group-alert {
+  margin: 1rem;
+}
+
+.small-group-image {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 200px;
+  margin: 1rem;
+  margin-top: 2rem;
+}
+
+.post-card {
+  margin: 1rem;
+}
+
+.group-short-info {
+  margin: 0.5rem;
+}

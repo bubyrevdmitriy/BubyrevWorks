@@ -1,0 +1,37 @@
+<div *ngIf="isCommonImagesDataLoaded && commonImagesInAlbum.length > 0; else emptyCommonImageBlock" class="photo-list-page">
+
+  <div class="image-address" role="alert">
+    <div *ngIf="currentPageHostCategory == 'users'">
+      <span routerLink="/{{currentPageHostCategory}}/{{currentPageId}}" > User profile page</span>
+    </div>
+    <div *ngIf="currentPageHostCategory == 'groups'">
+      <span routerLink="/{{currentPageHostCategory}}/{{currentPageId}}" >Group profile page</span>
+    </div>
+  </div>
+
+  <div>
+    <mat-paginator [length]="totalImages"
+                   [pageSize]="pageSize"
+                   [pageSizeOptions]="[3, 6, 9, 12, 24]"
+                   (page)="getPaginatorData($event)"
+                   aria-label="Select page">
+    </mat-paginator>
+  </div>
+
+
+
+  <div *ngFor="let commonImageInAlbum of commonImagesInAlbum; let i = index">
+    <app-image-in-album-small-element [commonImageInAlbum]="commonImageInAlbum"
+                                      [currentPageHostCategory]="currentPageHostCategory"
+                                      [currentPageId]="currentPageId"
+                                      (deleteRequest)="deleteCommonImage($event, i)"
+    >
+    </app-image-in-album-small-element>
+  </div>
+
+</div>
+<ng-template #emptyCommonImageBlock>
+  <div class="alert alert-warning image-alert" role="alert">
+    You haven't images yet...
+  </div>
+</ng-template>

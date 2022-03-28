@@ -1,0 +1,194 @@
+<div>
+  <div *ngIf="isGroupLoaded; else problemGroupBlock" class="container profile-page">
+
+  <div>
+    <h1>{{this.group.name}}</h1>
+  </div>
+  <mat-divider class="heading"></mat-divider>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-lg-8">
+
+      <div *ngIf="innerWidth > 990; else groupButtonsBlock"></div>
+
+      <div *ngIf="innerWidth < 990; else groupInfoBlock"></div>
+
+      <div class="profile-content" *ngIf="isCommonImagesDataLoaded && commonImages.length > 0; else emptyPhotoBlock">
+        <div routerLink="/groups/{{group.id}}/photos">
+          <h3>Group Photos:</h3>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="images-first">
+          <span class="small-image-card" *ngFor="let commonImage of commonImages; let i = index">
+            <span class="small-image-card" *ngIf="i<this.commonImageAmount" routerLink="/groups/{{group.id}}/photos/{{commonImage.id}}">
+              <img mat-card-image class="center-cropped" [src]="commonImage.imageBytes | setterImagePipe" alt="small-image">
+            </span>
+          </span>
+        </div>
+      </div>
+      <ng-template #emptyPhotoBlock class="profile-content">
+        <div class="alert alert-warning" role="alert">
+          Photo List is empty yet...
+        </div>
+      </ng-template>
+
+      <h3>Group Posts:</h3>
+
+      <div class="profile-content">
+        <mat-expansion-panel *ngIf="isGroupLoaded && isUserLoaded && group.isLoginUserAdmin" [expanded]="createPostPanelOpenState">
+          <mat-expansion-panel-header (click)="togglePanel()">
+            <mat-panel-title>
+              <p>Create post</p>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <app-add-post [group]="group"
+                        (addPostRequest)="addNewPost($event)"
+          ></app-add-post>
+        </mat-expansion-panel>
+      </div>
+
+      <div class="profile-content" *ngIf="isPostsDataLoaded && posts.length > 0; else emptyPostsBlock">
+
+        <div>
+          <mat-paginator [length]="totalPosts"
+                         [pageSize]="pageSize"
+                         [pageSizeOptions]="[3, 6, 9, 12, 24]"
+                         (page)="getPaginatorData($event)"
+                         aria-label="Select page">
+          </mat-paginator>
+        </div>
+
+        <div class="post-search-page" *ngFor="let post of posts; let i = index">
+          <app-post-element [post]="post"
+                            (deleteRequest)="deletePost($event, i)"
+          >
+          </app-post-element>
+        </div>
+      </div>
+      <ng-template #emptyPostsBlock class="profile-content">
+        <div class="alert alert-warning" role="alert">
+          Posts List is empty yet...
+        </div>
+      </ng-template>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-lg-4">
+      <div *ngIf="innerWidth <= 990; else groupButtonsBlock"></div>
+    </div>
+  </div>
+</div>
+
+<ng-template #groupButtonsBlock>
+  <div *ngIf="this.isGroupLoaded" routerLink="/groups/{{group.id}}/photos/{{this.group.profilePhoto.id}}">
+    <img class="group-image" *ngIf="this.isGroupLoaded" [src]="this.group.profilePhoto.imageBytes | setterImagePipe">
+  </div>
+
+  <div *ngIf="innerWidth > 990; else groupInfoBlock"></div>
+
+  <div class="profile-content" *ngIf="this.isUserLoaded! && this.isGroupLoaded">
+    <div *ngIf="this.group.isLoginUserMember && !this.group.isLoginUserAdmin">
+      <button  mat-raised-button color="accent" (click)="endGroupMembership()">End group membership</button>
+    </div>
+    <div *ngIf="this.group.isLoginUserAdmin && isUserPairAdminsLoaded">
+      <button  mat-raised-button color="primary" *ngIf="userPairAdmins.length>1" (click)="endGroupAdminShip()">End group adminship</button>
+      <button  mat-raised-button color="primary" (click)="openEditGroupComponent()">Edit group</button>
+    </div>
+    <div *ngIf="this.group.isLoginUserHasInvite">
+      <button  mat-raised-button color="primary" (click)="acceptGroupInvite()">Accept Group Invite</button>
+      <button  mat-raised-button color="accent" (click)="denyGroupInvite()">Deny Group Invite</button>
+    </div>
+    <div *ngIf="!this.group.isLoginUserHasInvite && !this.group.isLoginUserMember">
+      <button  mat-raised-button color="primary" (click)="enterGroup()">Enter to Group</button>
+    </div>
+  </div>
+
+  <div class="profile-content" *ngIf="isAudioFileArrayDataLoaded && audioFileArray.length > 0; else emptyAudiosBlock" >
+    <div routerLink="/groups/{{group.id}}/audios">
+      <h3>Group Audios:</h3>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="links" *ngFor="let audioFile of audioFileArray; let i = index">
+      <div class="small-image-card" *ngIf="i<4" routerLink="/groups/{{group.id}}/audios">
+        <span>{{audioFile.description}},</span>
+      </div>
+      <div *ngIf="i==5" routerLink="/groups/{{group.id}}/audios">
+        <span>...</span>
+      </div>
+    </div>
+  </div>
+  <ng-template #emptyAudiosBlock class="profile-content">
+    <div class="alert alert-warning profile-alert" role="alert">
+      Audio List is empty yet...<mat-icon *ngIf="isGroupLoaded && isUserLoaded && group.isLoginUserAdmin" routerLink="/groups/{{group.id}}/audios">upload</mat-icon>
+    </div>
+  </ng-template>
+
+  <div class="profile-content" *ngIf="isVideoDataLoaded && videoFiles.length > 0; else emptyVideosBlock" >
+    <div routerLink="/groups/{{group.id}}/videos">
+      <h3>Group Videos:</h3>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="links" *ngFor="let videoFile of videoFiles; let i = index">
+      <div class="small-image-card" *ngIf="i<4" routerLink="/groups/{{group.id}}/videos/{{videoFile.id}}">
+        <span>{{videoFile.description}},</span>
+      </div>
+      <div *ngIf="i==5" routerLink="/groups/{{group.id}}/videos">
+        <span>...</span>
+      </div>
+    </div>
+  </div>
+  <ng-template #emptyVideosBlock class="profile-content">
+    <div class="alert alert-warning profile-alert" role="alert">
+      Video List is empty yet...<mat-icon *ngIf="isGroupLoaded && isUserLoaded && group.isLoginUserAdmin" routerLink="/groups/{{group.id}}/videos">upload</mat-icon>
+    </div>
+  </ng-template>
+
+  <div class="profile-content" *ngIf="isUserPairsLoaded">
+    <div (click)="showGroupMembersDialog()">
+      <h3>Group Members:<mat-icon>open_in_new</mat-icon></h3>
+    </div>
+    <mat-divider></mat-divider>
+
+    <div class="links" *ngFor="let userPair of userPairs; let i = index">
+      <div  *ngIf="i<4" routerLink="/users/{{userPair.user.id}}">
+        <span>{{userPair.user.firstName}} {{userPair.user.middleName}} {{userPair.user.lastName}},</span>
+      </div>
+      <div  *ngIf="i==5">
+        <span (click)="showGroupMembersDialog()">...</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="profile-content" *ngIf="isUserPairAdminsLoaded">
+    <div (click)="showGroupAdminsDialog()">
+      <h3>Group Admins:<mat-icon>open_in_new</mat-icon></h3>
+    </div>
+    <mat-divider></mat-divider>
+
+    <div class="links" *ngFor="let userPairAdmin of userPairAdmins; let i = index">
+      <div  *ngIf="i<4" routerLink="/users/{{userPairAdmin.user.id}}">
+        <span>{{userPairAdmin.user.firstName}} {{userPairAdmin.user.middleName}} {{userPairAdmin.user.lastName}},</span>
+      </div>
+      <div  *ngIf="i==5">
+        <span (click)="showGroupAdminsDialog()">...</span>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+  <ng-template #groupInfoBlock class="profile-content">
+    <div>
+      <h3>Short info:</h3>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="profile-content">
+      <p *ngIf="this.group.description"> Description: {{this.group.description}}</p>
+    </div>
+  </ng-template>
+</div>
+
+<ng-template #problemGroupBlock>
+  <div class="alert alert-warning group-alert" role="alert">
+    Group with id {{currentGroupId}} is not available...
+  </div>
+</ng-template>

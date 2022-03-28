@@ -1,0 +1,40 @@
+<div class="login-page">
+<h2>Login</h2>
+
+<div *ngIf="isError" class="wrong-password">
+  <p>{{this.status}}</p>
+</div>
+
+<form [formGroup]="loginFormGroup">
+  <div>
+    <div class="justify-content-center">
+
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Email Address</mat-label>
+          <input matInput
+                 formControlName="email">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput type="password"
+                 formControlName="password">
+        </mat-form-field>
+      </div>
+
+      <div id="controls" class="row">
+        <button style="width: 50%" [disabled]="loginFormGroup.invalid" (click)="submit()" mat-flat-button color="primary">
+          Login
+        </button>
+        <br>
+        <a routerLink="/register">Register</a>, <a routerLink="/forgotPassword">Forgot password</a>
+      </div>
+
+    </div>
+  </div>
+</form>
+
+</div>

@@ -1,0 +1,83 @@
+<div class="register-page">
+  <h2>Register</h2>
+
+  <div *ngIf="this.isError" class="custom-alert">
+    <p>Something goes wrong during registration! Please try another email!</p>
+  </div>
+
+  <form [formGroup]="registerFormGroup">
+    <div>
+      <div class="justify-content-center">
+
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Email Address</mat-label>
+            <input matInput
+                   formControlName="email">
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Firstname</mat-label>
+            <input matInput
+                   formControlName="firstName">
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Lastname</mat-label>
+            <input matInput
+                   formControlName="lastName">
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Born Date</mat-label>
+            <input matInput type="date"
+                   formControlName="bornDate">
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput type="password"
+                   formControlName="password">
+          </mat-form-field>
+        </div>
+        <div *ngIf="formValue.password.errors && formValue.password.errors.minlength" class="custom-alert">Password length must be at least 6 characters!</div>
+
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Confirm password</mat-label>
+            <input matInput type="password"
+                   formControlName="confirmPassword">
+          </mat-form-field>
+        </div>
+        <div *ngIf="formValue.confirmPassword.errors && formValue.confirmPassword.errors.minlength" class="custom-alert">Password length must be at least 6 characters!</div>
+
+        <div *ngIf="this.registerFormGroup.value.password != this.registerFormGroup.value.confirmPassword" class="custom-alert">
+          <p>Passwords are not equal!</p>
+        </div>
+
+        <div *ngIf="isRegistrationProcess" align="center" class="custom-spinner">
+          <mat-spinner></mat-spinner>
+        </div>
+
+        <div id="controls" class="row">
+          <button  [disabled]="registerFormGroup.invalid || (this.registerFormGroup.value.password != this.registerFormGroup.value.confirmPassword)" (click)="submit()" mat-flat-button color="primary">
+            Register
+          </button>
+          <br>
+          <a routerLink="/login">Login</a>, <a routerLink="/forgotPassword">Forgot password</a>
+        </div>
+
+      </div>
+    </div>
+  </form>
+
+</div>
+

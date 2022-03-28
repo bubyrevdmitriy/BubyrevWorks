@@ -1,0 +1,24 @@
+.user-update-page {
+  text-align: center;
+  margin-top: 1rem;
+}
+#controls {
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+}
+
+mat-form-field {
+  width: 50%;
+}
+
+.profile-image {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 250px;
+}
+.update-button {
+  width: 200px;
+  margin: 1rem;
+}
