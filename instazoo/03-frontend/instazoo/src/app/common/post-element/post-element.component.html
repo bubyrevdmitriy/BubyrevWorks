@@ -1,0 +1,64 @@
+<mat-card class="post-card" >
+  <mat-card-header style="text-align: left">
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{this.post.title}}</mat-card-title>
+    <mat-card-subtitle>
+      Posted by: <a (click)="navigateToUserAuthor()">{{this.post.author.firstname}} {{this.post.author.lastname}}</a>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      {{post.location}}
+    </p>
+    <img mat-card-image [src]="this.post.images[0].imageBytes | setterImagePipe" alt="post image">
+    <p>
+      {{post.caption}}
+    </p>
+    <p *ngIf="post.likes>0" (click)="openUserLikeToPostList()">
+      likes: {{post.likes}}
+    </p>
+  </mat-card-content>
+
+  <mat-card-actions align="start">
+
+    <button mat-button *ngIf="!post.likedByLoginUser" (click)="likePost()">
+      <mat-icon>
+        favorite_border
+      </mat-icon>
+    </button>
+    <button mat-button *ngIf="post.likedByLoginUser" (click)="disLikePost()">
+      <mat-icon >
+        favorite
+      </mat-icon>
+    </button>
+    <button mat-button (click)="toggleCommentPanel()">
+      <mat-icon>
+        comment
+      </mat-icon>
+    </button>
+    <button mat-button *ngIf="post.loginUserAuthor" (click)="deletePost()">
+      <mat-icon color="warn" >
+        delete
+      </mat-icon>
+    </button>
+  </mat-card-actions>
+ <mat-expansion-panel class="mat-elevation-z0" [expanded]="commentPanelOpenState" >
+     <app-add-comment [postId]="post.id"
+                     (addCommentRequest)="addNewComment($event)">
+    </app-add-comment>
+
+    <div class="profile-content" *ngIf="isCommentDataLoaded && comments.length > 0; else emptyCommentsBlock">
+      <div class="app-comment-element" *ngFor="let comment of comments; let i = index">
+        <app-comment-element [comment]="comment"
+                             (deleteRequest)="deleteComment($event, i)"
+        >
+        </app-comment-element>
+      </div>
+    </div>
+    <ng-template #emptyCommentsBlock class="profile-content">
+      <div class="alert alert-warning empty-comments" role="alert">
+        Comments is empty yet...
+      </div>
+    </ng-template>
+  </mat-expansion-panel>
+</mat-card>

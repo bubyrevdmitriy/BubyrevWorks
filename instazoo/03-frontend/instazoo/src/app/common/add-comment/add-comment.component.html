@@ -1,0 +1,24 @@
+<form [formGroup]="commentForm">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+
+        <mat-form-field class="w-100" appearance="outline">
+          <mat-label>Comment</mat-label>
+          <input matInput
+                 formControlName="text">
+        </mat-form-field>
+
+      </div>
+      <div class="col-4" style="text-align: right">
+
+        <button mat-flat-button color="primary" [disabled]="commentForm.invalid" (click)="submit()">
+          Create comment
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+</form>

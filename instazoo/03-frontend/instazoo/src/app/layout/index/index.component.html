@@ -1,0 +1,29 @@
+<div class="index-page">
+
+  <mat-expansion-panel [expanded]="createPostPanelOpenState">
+    <mat-expansion-panel-header (click)="togglePanel()">
+      <mat-panel-title>
+        <p>Create post</p>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <app-add-post (addPostRequest)="addNewPost($event)">
+    </app-add-post>
+  </mat-expansion-panel>
+
+  <div  *ngIf="isPostsDataLoaded && posts.length > 0; else emptyIndexBlock">
+
+    <div *ngFor="let post of posts; let i = index">
+      <app-post-element [post]="post"
+                        (deleteRequest)="deletePost($event, i)"
+      >
+      </app-post-element>
+    </div>
+  </div>
+
+</div>
+
+<ng-template #emptyIndexBlock >
+  <div class="alert alert-warning empty-index-block" role="alert">
+    Posts is empty yet...
+  </div>
+</ng-template>

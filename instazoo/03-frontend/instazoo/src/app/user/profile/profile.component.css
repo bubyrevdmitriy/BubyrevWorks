@@ -1,0 +1,11 @@
+.empty-profile-block {
+  margin: 1rem;
+}
+
+.profile-content {
+  margin: 1rem;
+}
+
+.profile-image {
+  max-width: 500px;
+}

@@ -1,0 +1,13 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.main-link {
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+#menu-item button {
+  display: block;
+  margin: 0 auto;
+}
